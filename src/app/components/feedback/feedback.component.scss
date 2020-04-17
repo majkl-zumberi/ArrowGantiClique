@@ -1,13 +1,17 @@
+.body{
+    background: rgb(0,107,255);
+    background: linear-gradient(90deg, rgba(0,107,255,1) 0%, rgba(0,191,255,1) 89%);
+
+}
+
 .feedback-form {
   min-width: 400px;
   max-width: 700px;
   width: 100%;
+  color: white;
+
 }
 
-.form-card{
-    background: rgb(50,104,255);
-background: linear-gradient(90deg, rgba(50,104,255,1) 0%, rgba(86,216,255,1) 88%);
-}
 
 .full-width {
   width: 100%;
@@ -28,8 +32,30 @@ td {
 
 .button{
     background-color: lightblue;
+
 }
 
- .iconeform{
+.iconeform{
      font-size: 2.2em;
  }
+
+::ng-deep.mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+   }
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+  } 
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color:white !important;
+  }
+
+mat-label{
+    color:white;
+}
+
+.mat-select-value{
+    color:white;
+}
