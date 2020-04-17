@@ -55,10 +55,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-weight: lighter;
+    color: white;
 }
 
 .profile-flexitem-2 {
-    border-left: 1px solid blue;
+    border-left: 1px solid white;
     height: 320px;
     margin-left: 20px;
     margin-right: 20px;
@@ -69,6 +70,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-weight: bold;
+    color: white;
 }
 
 #pill-button {
