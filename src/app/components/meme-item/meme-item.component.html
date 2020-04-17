@@ -1,0 +1,14 @@
+<div *ngIf="memeItem != null || memeItem!=undefined">
+    <mat-card class="mat-card">
+        <img  mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" >
+        <h3>{{ memeItem.subreddit }}</h3>
+        <div class="flex">
+        <p class="icons-to-end">{{ memeItem.title }}</p>
+        <div class="icons">
+          <mat-icon>more_vert</mat-icon>
+          <mat-icon color="warn">favorite</mat-icon>
+          <mat-icon>share</mat-icon>
+        </div>
+      </div>
+    </mat-card>
+</div>
