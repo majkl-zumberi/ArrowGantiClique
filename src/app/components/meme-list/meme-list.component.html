@@ -1,1 +1,4 @@
-<p>meme-list works!</p>
+<div class="uk-container uk-container-large">
+    <button (click)="loadMoreContent()" [disabled]="!loadcontent">sas</button>
+  <app-meme-item *ngFor="let meme of memes" [memeItem]="meme"></app-meme-item>
+</div>
