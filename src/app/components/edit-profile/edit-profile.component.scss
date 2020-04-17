@@ -141,4 +141,15 @@ body {
 #white-just-make-it-white-please {
     background-color: rgba($color: white, $alpha: 0.35);
     margin-bottom: 1em;
+    text-decoration-style: solid white;
+}
+
+input::-webkit-textfield-decoration-container {
+    text-decoration-color: white;
+}
+
+input::placeholder {
+    color: white;
+    text-decoration-style: solid white;
+    text-decoration-color: white;
 }
