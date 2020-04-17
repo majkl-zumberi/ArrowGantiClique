@@ -1,4 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.h2-profile {
+    text-align: center;
+}
+
+.flex-container-profile {
+    display: flex;
+    padding-left: 55px;
+}
+
+.profile-flexitem-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: lighter;
+}
+
+.profile-flexitem-2 {
+    border-left: 1px solid blue;
+    height: 320px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.profile-flexitem-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#pill-button {
+    margin: 20px 0 0 40px;
+    padding: 2px 70px 2px 70px;
+    cursor: pointer;
+    border-radius: 16px;
+    color: blue;
+    font-weight: lighter;
+    grid-column-start: 2;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 3;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+}
