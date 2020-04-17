@@ -11,6 +11,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterComponent } from './components/register/register.component';
     FeedbackComponent,
     ProfiloComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
