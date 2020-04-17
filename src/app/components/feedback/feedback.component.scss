@@ -1,0 +1,35 @@
+.feedback-form {
+  min-width: 400px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.form-card{
+    background: rgb(50,104,255);
+background: linear-gradient(90deg, rgba(50,104,255,1) 0%, rgba(86,216,255,1) 88%);
+}
+
+.full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+#pill-button {
+    width: 100%;
+    padding: 2px 70px 2px 70px;
+    cursor: pointer;
+    border-radius: 16px;
+    color: black;
+    font-weight: lighter;
+}
+
+.button{
+    background-color: lightblue;
+}
+
+ .iconeform{
+     font-size: 2.2em;
+ }
