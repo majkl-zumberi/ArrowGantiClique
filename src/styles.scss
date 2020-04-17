@@ -8,6 +8,8 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
 }
 
 .h2-profile-1 {
@@ -19,6 +21,7 @@ body {
     padding: 0;
     margin-bottom: 0px;
     font-weight: lighter;
+    color: white;
 }
 
 .h2-profile-2 {
@@ -27,6 +30,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    color: white;
 }
 
 .avatar-image {
@@ -132,4 +136,9 @@ body {
 
 .example-full-width {
     width: 100%;
+}
+
+#white-just-make-it-white-please {
+    background-color: rgba($color: white, $alpha: 0.35);
+    margin-bottom: 1em;
 }
