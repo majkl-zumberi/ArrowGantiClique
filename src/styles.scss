@@ -11,7 +11,6 @@ body {
 }
 
 .h2-profile-1 {
-    font-weight: lighter;
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -19,6 +18,7 @@ body {
     grid-row-end: 2;
     padding: 0;
     margin-bottom: 0px;
+    font-weight: lighter;
 }
 
 .h2-profile-2 {
@@ -83,6 +83,20 @@ body {
     justify-self: center;
 }
 
+#pill-button-1 {
+    margin: 20px 0 0 38px;
+    padding: 2px 75px 2px 75px;
+    cursor: pointer;
+    border-radius: 16px;
+    color: blue;
+    font-weight: lighter;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -109,7 +123,11 @@ body {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
 }
 
 .example-full-width {
