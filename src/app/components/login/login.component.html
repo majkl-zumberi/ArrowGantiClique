@@ -1,1 +1,66 @@
-<p>login works!</p>
+
+<div class="uk-container uk-container-small">
+    
+        <div class="uk-position-center card-login">
+    <mat-card class="example-card">
+        
+        <mat-card-header>
+            <mat-card-title >
+         
+                <div class="testo">
+                    Accedi
+                </div>   
+            
+
+        <div mat-card-avatar class="example-header-image"><img src="assets/logo.JPG"></div>
+
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        
+        
+        <form method="post" class="example-form">
+            
+                
+                    <mat-card class="example">
+                    <mat-form-field class="example-full-width">
+                    <mat-label class="username">Nome Utente</mat-label><br>
+                        <input matInput  type ="text" placeholder="Mario Rossi" class="username">
+                    <mat-icon matPrefix class="icons">
+                        account_box
+                    </mat-icon>
+                    </mat-form-field>   <!--[formControl]="emailFormControl"  -->
+                    </mat-card>
+                    <br>
+                    <mat-card class="example">
+                    <mat-form-field class="example-full-width">
+                    <mat-label class="username">Password</mat-label><br>
+                    <input matInput  type="password" class="username" placeholder="Password">
+                    <mat-icon matPrefix class="icons">
+                        https
+                    </mat-icon>
+                    <mat-icon matSuffix class="icons">
+                        visibility
+                    </mat-icon>
+                    <!-- [formControl]="passwordFormControl"-->
+                    </mat-form-field>
+                    </mat-card>
+                    <br>
+                <mat-slide-toggle>Memorizza password</mat-slide-toggle>
+                <button id="pill-button" class="mat-raised-button">Accedi</button>
+        </form>
+        
+        
+    </mat-card-content>
+   
+
+
+</mat-card>
+<span class="done">
+    <button mat-fab color="primary">
+    <mat-icon matTooltip="registrati">add</mat-icon>
+    </button>
+    </span>
+
+</div>
+</div>
