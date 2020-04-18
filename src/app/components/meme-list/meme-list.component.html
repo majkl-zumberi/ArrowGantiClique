@@ -1,4 +1,5 @@
 <div class="uk-container uk-container-large">
-    <button (click)="loadMoreContent()" [disabled]="!loadcontent">sas</button>
-  <app-meme-item *ngFor="let meme of memes" [memeItem]="meme"></app-meme-item>
+    <app-meme-item *ngFor="let meme of memes" [memeItem]="meme"></app-meme-item>
+    <br><br>
+    <button id="pill-button" class="mat-raised-button" (click)="loadMoreContent()" [disabled]="!loadcontent">Mostra di più</button>
 </div>
