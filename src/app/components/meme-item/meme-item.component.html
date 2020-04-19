@@ -1,28 +1,31 @@
 <div *ngIf="memeItem != null || memeItem!=undefined">
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-      <div class="uk-card-media-left uk-cover-container uk-height-medium" >
-          <img  mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" uk-cover uk-parallax >
-          <canvas width="600" height="400"></canvas>
-      </div>
-      <div>
-          <div class="uk-card-body">
-              <span class="uk-badge uk-label">{{ memeItem.subreddit }}</span>
-              
-              <div class="flex">
-                <p class="icons-to-end uk-text-lead">{{ memeItem.title }}</p>
-                <div class="icons">
-                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="setToFavorite(memeItem.id)">
-                    <mat-icon [ngStyle]="{ 'color': (isinFavorite ? 'red' : '') }" >favorite</mat-icon>
-                  </button>
-                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-                    <mat-icon>share</mat-icon>
-                  </button>
-                  <button (click)="hideMeme(memeItem.id)" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-                    <mat-icon>more_vert</mat-icon>
-                  </button>
-                </div>
-              </div>
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container uk-height-medium">
+      <img mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" uk-cover uk-parallax>
+      <canvas width="600" height="400"></canvas>
+    </div>
+    <div>
+      <div class="uk-card-body">
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{memeItem.postLink}}" class="fb-xfbml-parse-ignore">Condividi</a></div>
+        <span class="uk-badge uk-label">{{ memeItem.subreddit }}</span>
+
+        <div class="flex">
+          <p class="icons-to-end uk-text-lead">{{ memeItem.title }}</p>
+          <div class="icons">
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon"
+              (click)="setToFavorite(memeItem.id)">
+              <mat-icon [ngStyle]="{ 'color': (isinFavorite ? 'red' : '') }">favorite</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" >
+              <mat-icon>share</mat-icon>
+            </button>
+            <button (click)="hideMeme(memeItem.id)" mat-icon-button
+              aria-label="Example icon button with a vertical three dot icon">
+              <mat-icon>more_vert</mat-icon>
+            </button>
           </div>
+        </div>
       </div>
+    </div>
   </div>
 </div>
