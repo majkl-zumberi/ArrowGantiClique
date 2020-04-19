@@ -1,14 +1,28 @@
 <div *ngIf="memeItem != null || memeItem!=undefined">
-    <mat-card class="mat-card">
-        <img  mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" >
-        <h3>{{ memeItem.subreddit }}</h3>
-        <div class="flex">
-        <p class="icons-to-end">{{ memeItem.title }}</p>
-        <div class="icons">
-          <mat-icon>more_vert</mat-icon>
-          <mat-icon color="warn">favorite</mat-icon>
-          <mat-icon>share</mat-icon>
-        </div>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+      <div class="uk-card-media-left uk-cover-container uk-height-medium" >
+          <img  mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" uk-cover uk-parallax >
+          <canvas width="600" height="400"></canvas>
       </div>
-    </mat-card>
+      <div>
+          <div class="uk-card-body">
+              <span class="uk-badge uk-label">{{ memeItem.subreddit }}</span>
+              
+              <div class="flex">
+                <p class="icons-to-end uk-text-lead">{{ memeItem.title }}</p>
+                <div class="icons">
+                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="setToFavorite(memeItem.id)">
+                    <mat-icon [ngStyle]="{ 'color': (isinFavorite ? 'red' : '') }" >favorite</mat-icon>
+                  </button>
+                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                    <mat-icon>share</mat-icon>
+                  </button>
+                  <button (click)="hideMeme(memeItem.id)" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
