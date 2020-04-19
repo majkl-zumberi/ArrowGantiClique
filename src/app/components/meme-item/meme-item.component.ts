@@ -9,9 +9,17 @@ import { MemeInterface } from 'src/app/models/memeInterface';
 export class MemeItemComponent implements OnInit {
 
   @Input() memeItem:MemeInterface;
+  isinFavorite:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  hideMeme(memeId:number){
+    console.log("pronto per nascondere l'id"+memeId);
+  }
+  setToFavorite(memeId:number){
+    console.log("pronto per mettere/togliere preferiti l'id"+memeId);
+    this.isinFavorite=!this.isinFavorite;
+  }
 }
