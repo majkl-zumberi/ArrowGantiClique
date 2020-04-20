@@ -1,38 +1,38 @@
-
 <div class="uk-container uk-container-small">
-    
-        <div class="uk-position-center card-login">
-    <mat-card class="example-card">
-        
-        <mat-card-header>
-            <mat-card-title >
-         
-                <div class="testo">
-                    Accedi
-                </div>   
-            
-            
-        <div mat-card-avatar class="example-header-image"><img src="assets/logo.JPG"></div>
 
-        </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        
-        
-        <form method="post" class="example-form">
-            
-                
-                   
-                    <mat-form-field class="example-full-width" appearance="fill" >
-                    <mat-label class="username">Nome Utente</mat-label><br>
-                        <input matInput  type ="text" placeholder="Mario Rossi" class="username">
-                    <mat-icon matPrefix class="icons">
-                        account_box
-                    </mat-icon>
-                    </mat-form-field>   <!--[formControl]="emailFormControl"  -->
+    <div class="uk-position-center card-login">
+        <mat-card class="example-card">
+
+            <mat-card-header>
+                <mat-card-title>
+
+                    <div class="testo">
+                        Accedi
+                    </div>
+
+
+                    <div mat-card-avatar class="example-header-image" style="position:absolute;top:20px;left:130px;margin-bottom:20px;"><img src="assets/logo.JPG"></div>
+
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content style="position:absolute;top:120px;">
+
+
+                <form method="post" class="example-form">
+
+
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label class="username">Nome Utente</mat-label><br>
+                        <input matInput type="text" placeholder="Mario Rossi" class="username">
+                        <mat-icon matPrefix class="icons">
+                            account_box
+                        </mat-icon>
+                    </mat-form-field>
+                    <!--[formControl]="emailFormControl"  -->
                     <br>
-                    
-                    <mat-form-field class="example-full-width"  appearance="fill">
+
+                    <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label class="username">Enter your password</mat-label>
                         <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password">
                         <mat-icon matPrefix class="icons">
@@ -42,25 +42,25 @@
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         
                         </button>
-                      </mat-form-field>
-                    
-                    
+                    </mat-form-field>
+
+
                     <br>
-                <mat-slide-toggle>Memorizza password</mat-slide-toggle>
-                <button id="pill-button" class="mat-raised-button">Accedi</button>
-        </form>
-        
-        
-    </mat-card-content>
-   
+                    <mat-slide-toggle>Memorizza password</mat-slide-toggle>
+                    <button id="pill-button" class="mat-raised-button">Accedi</button>
+                </form>
 
 
-</mat-card>
-<span class="done">
+            </mat-card-content>
+
+
+
+        </mat-card>
+        <span class="done">
     <button mat-fab color="primary">
     <mat-icon matTooltip="registrati">add</mat-icon>
     </button>
     </span>
 
-</div>
+    </div>
 </div>

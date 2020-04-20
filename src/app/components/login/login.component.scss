@@ -1,48 +1,43 @@
-
-  .example-header-image {
-      
+.example-header-image {
     background-size: cover;
-    width:100px;
-  }
-
-.example-card{
-    width: 300px;
-    height: 400px;
-    background: rgb(0,107,255);
-background: linear-gradient(90deg, rgba(0,107,255,1) 0%, rgba(0,191,255,1) 89%);
--webkit-box-shadow: -10px -10px 0px 0px #43779F;
-
--moz-box-shadow: -10px -10px 0px 0px #43779F;
-
-box-shadow: -10px -10px 0px 0px #43779F;
-
+    width: 100px;
 }
 
-.example{
+.example-card {
+    width: 300px;
+    height: 400px;
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
+    -webkit-box-shadow: -10px -10px 0px 0px #43779F;
+    -moz-box-shadow: -10px -10px 0px 0px #43779F;
+    box-shadow: -10px -10px 0px 0px #43779F;
+}
+
+.example {
     width: 250px;
     height: 35px;
-    background: rgb(0,107,255);
-    background: linear-gradient(90deg, rgba(0,107,255,1) 0%, rgba(0,191,255,1) 89%);
-
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
 }
 
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  .testo{
-      color:white;
-      position:absolute;
-      top:30px;
-      left:120px;
-  }
+}
 
-  #pill-button {
+.example-full-width {
+    width: 100%;
+}
+
+.testo {
+    color: white;
+    position: absolute;
+    top: 80px;
+    left: 128px;
+}
+
+#pill-button {
     margin: 20px 0 0 40px;
     padding: 2px 70px 2px 70px;
     cursor: pointer;
@@ -51,45 +46,41 @@ box-shadow: -10px -10px 0px 0px #43779F;
     font-weight: lighter;
 }
 
-.card-login{
-    position:relative
+.card-login {
+    position: relative
 }
 
-
-
-.done{
-    position:absolute;
-    top:40px;
-    right:-30px;
-
+.done {
+    position: absolute;
+    top: 40px;
+    right: -30px;
 }
 
-.icons{
-    font-size:1.7em;
-    color:white;
-    
+.icons {
+    font-size: 1.7em;
+    color: white;
 }
 
-
-.username{
-    color:white;
+.username {
+    color: white;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
     /*change color of label*/
     color: white !important;
-   }
-   ::ng-deep.mat-form-field-underline {
-    /*change color of underline*/
-    background-color: white !important;
-  } 
-  ::ng-deep.mat-form-field-ripple {
-   /*change color of underline when focused*/
-   background-color: white !important;;
-  }
-
-
-  input::-webkit-input-placeholder{
-    color:white;
 }
 
+ ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+ ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+    ;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
