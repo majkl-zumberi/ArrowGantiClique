@@ -1,21 +1,25 @@
 .example-header-image {
     background-size: cover;
     width: 100px;
+    
+
 }
 
 .example-card {
     width: 300px;
     height: 400px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(207, 212, 240, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    box-shadow: inset 10px 10px 8px #9ce9f8;
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
+    -webkit-box-shadow: -10px -10px 0px 0px #43779F;
+    -moz-box-shadow: -10px -10px 0px 0px #43779F;
+    box-shadow: -10px -10px 0px 0px rgb(127,182,255);;
 }
 
 .example {
     width: 250px;
     height: 35px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(207, 212, 240, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
 }
 
 .example-form {
@@ -30,9 +34,13 @@
 
 .testo {
     color: white;
-    position: absolute;
-    top: 80px;
-    left: 120px;
+    
+}
+
+#system{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #pill-button {
@@ -56,4 +64,30 @@
 
 .icons {
     font-size: 1.7em;
+    color: white;
 }
+
+.username {
+    color: white;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+
+ ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+ ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+    ;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+

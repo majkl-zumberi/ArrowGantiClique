@@ -22,12 +22,12 @@ export class AppComponent {
             index: 1
         }, {
             label: 'FeedBack',
-            link: './register',
+            link: './feedback',
             index: 2
         }, 
          {
             label: 'Profilo',
-            link: './login',
+            link: './profilo',
             index: 3
         }, 
     ];
