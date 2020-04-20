@@ -1,43 +1,41 @@
 .example-header-image {
-      
     background-size: cover;
-    width:100px;
-  }
-
-.example-card{
-    width: 300px;
-    height: 400px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(207,212,240,1) 0%, rgba(0,212,255,1) 100%);
-    box-shadow: inset 10px 10px 8px #9ce9f8;
-
+    width: 100px;
 }
 
-.example{
+.example-card {
+    width: 300px;
+    height: 400px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(207, 212, 240, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    box-shadow: inset 10px 10px 8px #9ce9f8;
+}
+
+.example {
     width: 250px;
     height: 35px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(207,212,240,1) 0%, rgba(0,212,255,1) 100%);
-
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(207, 212, 240, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  .testo{
-      color:white;
-      position:absolute;
-      top:30px;
-      left:120px;
-  }
+}
 
-  #pill-button {
+.example-full-width {
+    width: 100%;
+}
+
+.testo {
+    color: white;
+    position: absolute;
+    top: 80px;
+    left: 120px;
+}
+
+#pill-button {
     margin: 20px 0 0 40px;
     padding: 2px 70px 2px 70px;
     cursor: pointer;
@@ -46,23 +44,16 @@
     font-weight: lighter;
 }
 
-.card-login{
-    position:relative
+.card-login {
+    position: relative
 }
 
-
-
-.done{
-    position:absolute;
-    top:40px;
-    right:-30px;
-
+.done {
+    position: absolute;
+    top: 40px;
+    right: -30px;
 }
 
-.icons{
-    font-size:1.7em;
-    
+.icons {
+    font-size: 1.7em;
 }
-
-
-
