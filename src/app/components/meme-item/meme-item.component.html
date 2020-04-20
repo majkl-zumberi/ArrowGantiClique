@@ -6,9 +6,11 @@
     </div>
     <div>
       <div class="uk-card-body">
-        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{memeItem.postLink}}" class="fb-xfbml-parse-ignore">Condividi</a></div>
-        <span class="uk-badge uk-label">{{ memeItem.subreddit }}</span>
 
+        <span class="uk-badge uk-label">{{ memeItem.subreddit }}</span>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
+          data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{memeItem.postLink}}"
+            class="fb-xfbml-parse-ignore">Condividi</a></div>
         <div class="flex">
           <p class="icons-to-end uk-text-lead">{{ memeItem.title }}</p>
           <div class="icons">
@@ -16,9 +18,45 @@
               (click)="setToFavorite(memeItem.id)">
               <mat-icon [ngStyle]="{ 'color': (isinFavorite ? 'red' : '') }">favorite</mat-icon>
             </button>
-            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" >
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
               <mat-icon>share</mat-icon>
             </button>
+            <div uk-dropdown>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="uk-nav-header">Social</li>
+                <li class="uk-nav-divider"></li>
+                <li>
+                  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/"
+                    data-layout="button" data-size="large"><a target="_blank"
+                      href="https://www.facebook.com/sharer/sharer.php?u={{memeItem.postLink}}"
+                      class="fb-xfbml-parse-ignore">Condividi</a></div>
+                </li>
+                <!-- I got these buttons from simplesharebuttons.com -->
+                <div id="share-buttons">
+
+
+
+                  <!-- Facebook -->
+                  <a target="_blank"
+                      href="https://www.facebook.com/sharer/sharer.php?u={{memeItem.postLink}}"
+                      class="fb-xfbml-parse-ignore">
+                      <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                  </a>
+
+
+                  <!-- Twitter -->
+                  
+                  <a href="https://twitter.com/share?url={{memeItem.postLink}}&amp;text=Check%20out%20this%20post!😂&amp;hashtags=memes"
+                    target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                  </a>
+
+
+
+                </div>
+                
+              </ul>
+            </div>
             <button (click)="hideMeme(memeItem.id)" mat-icon-button
               aria-label="Example icon button with a vertical three dot icon">
               <mat-icon>more_vert</mat-icon>
