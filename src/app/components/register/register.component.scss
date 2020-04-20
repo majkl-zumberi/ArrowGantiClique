@@ -1,9 +1,12 @@
 .example-header-image {
     background-size: cover;
     width: 100px;
-    
-
 }
+.bg-color{
+    background-color: white;
+}
+
+
 
 .example-card {
     width: 300px;
@@ -44,12 +47,13 @@
 }
 
 #pill-button {
-    margin: 20px 0 0 40px;
+    margin-top: 2em;
     padding: 2px 70px 2px 70px;
     cursor: pointer;
     border-radius: 16px;
     color: blue;
     font-weight: lighter;
+    width:100%;
 }
 
 .card-login {
@@ -91,3 +95,7 @@ input::-webkit-input-placeholder {
     color: white;
 }
 
+.iconawhite{
+    color:white!important;
+    text-decoration: none;
+}
