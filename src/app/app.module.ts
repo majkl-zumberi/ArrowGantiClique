@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { MemeItemComponent } from './components/meme-item/meme-item.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,16 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     ProfiloComponent,
     LoginComponent,
     RegisterComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    MemeItemComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

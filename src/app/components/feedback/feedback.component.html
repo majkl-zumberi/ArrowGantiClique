@@ -1,1 +1,58 @@
-<p>feedback works!</p>
+<body class="body">
+    <div class="uk-container uk-position-center">
+    <h3 class="uk-text-center">Inviaci un tuo feedback</h3>
+        <form class="feedback-form">
+
+            <table class="full-width" cellspacing="0">
+                <tr>
+                <tr class="tr">
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-icon class="iconeform" matPrefix>account_box</mat-icon>
+                        <mat-label>Nome</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </tr>
+                <tr class="tr">
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-icon class="iconeform" matPrefix>account_box</mat-icon>
+                        <mat-label>Cognome</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </tr>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Sesso</mat-label>
+                    <mat-select #fontSize value="16px" (selectionChange)="'genere'">
+                        <mat-option value="tanto">Tanto</mat-option>
+                        <mat-option value="clown">Clown</mat-option>
+                        <mat-option value="mememaster">MemeMaster</mat-option>
+                    </mat-select>
+                    <mat-icon class="iconeform" matPrefix>wc</mat-icon>
+                </mat-form-field>
+            </table>
+
+            <p>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-icon class="iconeform" matPrefix>email</mat-icon>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Ex. pat@example.com">
+                </mat-form-field>
+            </p>
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Telefono</mat-label>
+                <input type="tel" matInput placeholder="555 555 1234">
+                <mat-icon class="iconeform" matPrefix>call</mat-icon>
+            </mat-form-field>
+
+            <p>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Commenti</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+            </p>
+
+        </form>
+        <button id="pill-button" class="mat-raised-button">Invia</button>
+
+</div>
+</body>
