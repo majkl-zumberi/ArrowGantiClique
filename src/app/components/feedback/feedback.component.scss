@@ -37,6 +37,7 @@ td {
 
 .iconeform {
   font-size: 2.2em;
+  margin-right: .5em;
 }
 
 ::ng-deep.mat-focused .mat-form-field-label {
@@ -64,5 +65,14 @@ mat-label {
 }
 .uk-text-center{
     color: white;
+}
+
+div.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: white !important;
+}
+div.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: white !important;
 }
 
