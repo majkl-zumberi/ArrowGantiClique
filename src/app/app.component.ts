@@ -27,7 +27,7 @@ export class AppComponent {
         }, 
          {
             label: 'Profilo',
-            link: './profilo',
+            link: './register',
             index: 3
         }, 
     ];
