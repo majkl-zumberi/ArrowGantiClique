@@ -1,1 +1,13 @@
-<p>meme-list works!</p>
+<div class="uk-container uk-container-large">
+  <div class="filterList">
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip color="primary" selected>Tutti</mat-chip>
+      <mat-chip>Preferiti</mat-chip>
+      <mat-chip>Nascosti</mat-chip>
+    </mat-chip-list>
+  </div>
+  <app-meme-item *ngFor="let meme of memes" [memeItem]="meme"></app-meme-item>
+  <br><br>
+  <button id="pill-button" class="mat-raised-button" (click)="loadMoreContent()" [disabled]="!loadcontent">Mostra di
+    più</button>
+</div>

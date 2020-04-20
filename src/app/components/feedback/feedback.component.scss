@@ -1,0 +1,68 @@
+.body {
+  background: rgb(0, 107, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 107, 255, 1) 0%,
+    rgba(0, 191, 255, 1) 89%
+  );
+}
+
+.feedback-form {
+  min-width: 400px;
+  max-width: 700px;
+  width: 100%;
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+#pill-button {
+  width: 100%;
+  padding: 2px 70px 2px 70px;
+  cursor: pointer;
+  border-radius: 16px;
+  color: black;
+  font-weight: lighter;
+}
+
+.button {
+  background-color: lightblue;
+}
+
+.iconeform {
+  font-size: 2.2em;
+  margin-right: .5em;
+}
+
+::ng-deep.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: white !important;
+}
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: white !important;
+}
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: white !important;
+}
+
+mat-label {
+  color: white;
+}
+
+::ng-deep.mat-select-value {
+  color: white;
+}
+::ng-deep.mat-select-arrow {
+  color: white;
+}
+.uk-text-center{
+    color: white;
+}
