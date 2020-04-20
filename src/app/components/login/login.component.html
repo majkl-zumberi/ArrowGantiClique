@@ -19,7 +19,7 @@
     <mat-card-content>
         
         
-        <form method="post" class="example-form">
+        <!--<form class="example-form">-->
             
                 
                    
@@ -39,8 +39,8 @@
                             https
                         </mat-icon>
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        
+                        <mat-icon class="icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <!--[formControl]="passwordFormControl"  -->
                         </button>
                       </mat-form-field>
                     
@@ -48,7 +48,7 @@
                     <br>
                 <mat-slide-toggle>Memorizza password</mat-slide-toggle>
                 <button id="pill-button" class="mat-raised-button">Accedi</button>
-        </form>
+       <!-- </form>-->
         
         
     </mat-card-content>
