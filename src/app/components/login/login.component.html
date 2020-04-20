@@ -22,29 +22,29 @@
         <form method="post" class="example-form">
             
                 
-                    <mat-card class="example">
-                    <mat-form-field class="example-full-width">
+                   
+                    <mat-form-field class="example-full-width" appearance="fill" >
                     <mat-label class="username">Nome Utente</mat-label><br>
                         <input matInput  type ="text" placeholder="Mario Rossi" class="username">
                     <mat-icon matPrefix class="icons">
                         account_box
                     </mat-icon>
                     </mat-form-field>   <!--[formControl]="emailFormControl"  -->
-                    </mat-card>
                     <br>
-                    <mat-card class="example">
-                    <mat-form-field class="example-full-width">
-                    <mat-label class="username">Password</mat-label><br>
-                    <input matInput  type="password" class="username" placeholder="Password">
-                    <mat-icon matPrefix class="icons">
-                        https
-                    </mat-icon>
-                    <mat-icon matSuffix class="icons">
-                        visibility
-                    </mat-icon>
-                    <!-- [formControl]="passwordFormControl"-->
-                    </mat-form-field>
-                    </mat-card>
+                    
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label class="username">Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password">
+                        <mat-icon matPrefix class="icons">
+                            https
+                        </mat-icon>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        
+                        </button>
+                      </mat-form-field>
+                    
+                    
                     <br>
                 <mat-slide-toggle>Memorizza password</mat-slide-toggle>
                 <button id="pill-button" class="mat-raised-button">Accedi</button>

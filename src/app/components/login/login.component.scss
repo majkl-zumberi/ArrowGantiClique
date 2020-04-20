@@ -10,7 +10,11 @@
     height: 400px;
     background: rgb(0,107,255);
 background: linear-gradient(90deg, rgba(0,107,255,1) 0%, rgba(0,191,255,1) 89%);
-    box-shadow: inset 10px 10px 8px #63d8f0;
+-webkit-box-shadow: -10px -10px 0px 0px #43779F;
+
+-moz-box-shadow: -10px -10px 0px 0px #43779F;
+
+box-shadow: -10px -10px 0px 0px #43779F;
 
 }
 
