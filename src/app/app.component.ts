@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'ArrowGantiClique';
   navLinks: any[];
   activeLinkIndex = -1; 
+  currentRoute: string;
   constructor(private router: Router) {
     this.navLinks = [
         {
@@ -35,6 +36,8 @@ export class AppComponent {
 ngOnInit(): void {
   this.router.events.subscribe((res) => {
       this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));
+      this.currentRoute=this.router.url.toString();
   });
+  
 }
 }

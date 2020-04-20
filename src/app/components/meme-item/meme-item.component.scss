@@ -1,0 +1,25 @@
+.mat-card{
+    margin-bottom: .6em;
+}
+.memeImg{
+    width: 9em;
+    height: 9em;
+    margin-right: 1.2em;
+    float: left;
+}
+.flex{
+    display: flex;
+}
+.icons-to-end{
+    flex: 1 1 auto;
+}
+.icons{
+    display: inline-flex;
+}
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+    }

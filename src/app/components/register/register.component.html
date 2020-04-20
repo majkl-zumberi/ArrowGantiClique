@@ -1,0 +1,69 @@
+
+<div class="uk-container uk-container-small">
+    
+    <div class="uk-position-center card-login">
+<mat-card class="example-card" id="system">
+    
+    <mat-card-header style="margin-left: 100px;">
+        <mat-card-title>
+            
+
+            <div class="example-header-image" ><img src="assets/logo.JPG"></div>
+
+            <div class="testo">
+                Registrati
+            </div>   
+        
+        
+    
+
+    </mat-card-title>
+</mat-card-header>
+<mat-card-content >
+    
+    
+    <!--<form class="example-form">-->
+        
+            
+               
+                <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label class="username">Nome Utente</mat-label><br>
+                    <input matInput  type ="text" placeholder="Mario Rossi" class="username">
+                <mat-icon matPrefix class="icons">
+                    account_box
+                </mat-icon>
+                </mat-form-field>   <!--[formControl]="emailFormControl"  -->
+                <br>
+                
+                <mat-form-field class="example-full-width"  appearance="fill">
+                    <mat-label class="username">Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password">
+                    <mat-icon matPrefix class="icons">
+                        https
+                    </mat-icon>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon class="icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    
+                    </button>
+                  </mat-form-field>
+                
+                
+                <br>
+            
+            <button id="pill-button" class="mat-raised-button">Registrati</button>
+   <!-- </form>-->
+    
+    
+</mat-card-content>
+
+
+
+</mat-card>
+<span class="done">
+<button mat-fab color="primary">
+<mat-icon matTooltip="accedi"><a href="/login">add</a></mat-icon>
+</button>
+</span>
+
+</div>
+</div>
