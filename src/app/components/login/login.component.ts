@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   hide=true;
+  loginError:string='';
   loginForm: FormGroup;
 
   get usernameControl():FormControl{
@@ -33,7 +34,10 @@ export class LoginComponent implements OnInit {
     console.log("username:"+this.usernameControl.value);
     console.log("password:"+this.passwordControl.value);
     this.auth.signIn(this.usernameControl.value, this.passwordControl.value);
-
+    this.auth.errMessage$.subscribe(message=>{
+      this.loginError=message;
+      console.log(message);
+    });
   }
 
 }
