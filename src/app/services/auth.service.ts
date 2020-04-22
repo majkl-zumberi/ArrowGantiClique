@@ -4,6 +4,7 @@ import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 import { UserInterface } from '../models/UserInserface';
 import { Subject } from 'rxjs';
+import { RegisterUserInterface } from '../models/RegisterUserInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,17 @@ export class AuthService {
       console.log("utente non trovato");
       this.errMessageSource.next("utente non trovato");
     })
+  }
+
+  signUp(username:string, password:string){
+    console.log(`username: ${username} , password: ${password}`);
+    let newUser: RegisterUserInterface= {
+      username: username, password:password
+    };
+    console.log(newUser);
+    this.http.signUpNewUser(newUser).subscribe(utenteRegistrato=>{
+      console.log("sto registrando un utente nuovo");
+      console.log(utenteRegistrato);
+    });
   }
 }
