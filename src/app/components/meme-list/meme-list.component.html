@@ -6,8 +6,8 @@
       <mat-chip>Nascosti</mat-chip>
     </mat-chip-list>
   </div>
-  <app-meme-item *ngFor="let meme of memes" [memeItem]="meme"></app-meme-item>
+  <app-meme-item *ngFor="let meme of memes" [memeItem]="meme" ></app-meme-item>
   <br><br>
-  <button id="pill-button" class="mat-raised-button" (click)="loadMoreContent()" [disabled]="!loadcontent">Mostra di
+  <button id="pill-button" class="mat-raised-button" (click)="loadMoreContent()" [hidden]="!loadcontent">Mostra di
     più</button>
 </div>

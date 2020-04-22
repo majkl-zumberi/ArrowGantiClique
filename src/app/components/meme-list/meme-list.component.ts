@@ -13,14 +13,18 @@ export class MemeListComponent implements OnInit {
   nextPageMemes:MemeInterface[];
   pageCounter:number=1;
   loadcontent:boolean;
-  constructor(private listService:MemeListService) { }
+
+  constructor(private listService:MemeListService) { 
+  }
 
   ngOnInit(): void {
     this.loadcontent=true;
     this.listService.getAllMemes(this.pageCounter).subscribe(memes=>{
       this.memes=memes;
       console.table(this.memes);
+     
     });
+    
   }
 
   loadMoreContent(){
