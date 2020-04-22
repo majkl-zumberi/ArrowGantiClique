@@ -17,9 +17,11 @@ const httpOptions= {
 
 
 export class MemeListService {
-
-  private memeListUrl:string='http://my-json-server.typicode.com/majkl-zumberi/meme-list-api/memes';
+//old http://my-json-server.typicode.com/majkl-zumberi/meme-list-api/memes
+  private dbUrl:string='http://localhost:3000';
+  private memeListUrl:string='http://localhost:3000/memes';
   private memeUsersUrl:string="http://localhost:3000/users";
+  private memeFavUrl:string="http://localhost:3000/favorites";
 
   constructor(private http:HttpClient) { }
 
@@ -33,5 +35,17 @@ export class MemeListService {
 
   signUpNewUser(user:RegisterUserInterface):Observable<any>{
     return this.http.post(this.memeUsersUrl , user, httpOptions);
+  }
+
+  setFav(fav):Observable<any>{
+    return this.http.post(`${this.memeFavUrl}`,fav, httpOptions)
+  }
+
+  remFav(fav):Observable<any>{
+    return this.http.delete(`${this.memeFavUrl}/${fav}`, httpOptions)
+  }
+
+  getAllFav(idUtente:number,idPost):Observable<any>{
+    return this.http.get<any>(`${this.memeFavUrl}?idUtente=${idUtente}&idPost=${idPost}`);
   }
 }
