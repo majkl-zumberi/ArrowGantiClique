@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { UserInterface } from '../models/UserInserface';
 import { Subject } from 'rxjs';
 import { RegisterUserInterface } from '../models/RegisterUserInterface';
+import { NOMEM } from 'dns';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +22,8 @@ export class AuthService {
         console.log(user);
         if (username == user.username && password == user.password){
           console.log("utente trovato, pronto per il login");
-          let UserLogged: RegisterUserInterface= {
-            username: username, password: password
+          let UserLogged: UserInterface= {
+            id:user.id, username: username, password: password, nome:user.nome, cognome:user.cognome, sesso:user.sesso, email:user.email, telefono:user.telefono
           };
           sessionStorage.setItem("utente", JSON.stringify(UserLogged));
           this.router.navigateByUrl("/home");
@@ -36,14 +37,13 @@ export class AuthService {
   signUp(username:string, password:string){
     console.log(`username: ${username} , password: ${password}`);
     let newUser: RegisterUserInterface= {
-      username: username, password:password
+      username: username, password:password, favorites:[], hidden:[], nome:"", cognome:"", sesso:"", email:"", telefono:""
     };
     console.log(newUser);
     this.http.signUpNewUser(newUser).subscribe(utenteRegistrato=>{
       console.log("sto registrando un utente nuovo");
       console.log(utenteRegistrato);
-      sessionStorage.setItem("utente", JSON.stringify(newUser));
-      this.router.navigateByUrl("/home");
+      this.router.navigateByUrl("/login");
     });
   }
 }

@@ -1,7 +1,10 @@
 export interface UserInterface{
-    id: number,
-    fav:number,
-    hide:number,
-    username:string,
-    password:string
+    id: number;
+    username:string;
+    password:string;
+    nome: string;
+    cognome: string;
+    sesso: string;
+    email: string;
+    telefono: string;
 }
