@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MemeInterface } from '../models/memeInterface';
-
+import { UserInterface } from '../models/UserInserface';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +17,7 @@ export class MemeListService {
     return this.http.get<MemeInterface[]>(`${this.memeListUrl}?_page=${page}&_limit=5`);
   }
 
-  getAllUsers():Observable<any>{
-    return this.http.get<any>(`${this.memeUsersUrl}`);
+  getAllUsers():Observable<UserInterface[]>{
+    return this.http.get<UserInterface[]>(`${this.memeUsersUrl}`);
   }
 }
