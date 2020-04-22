@@ -7,17 +7,19 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { CanActivateGuard } from './components/guard/can-activate.guard';
+import { CanActivateLoginGuard } from './components/guard/can-activate-login.guard';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component:  HomepageComponent},
-  { path: 'memes', component:  MemeListComponent},
-  { path: 'feedback', component: FeedbackComponent},
-  { path: 'profilo', component: ProfiloComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent},
-  { path: 'editProfile', component: EditProfileComponent}
+  { path: 'home', component:  HomepageComponent, canActivate:[CanActivateGuard]},
+  { path: 'memes', component:  MemeListComponent,  canActivate:[CanActivateGuard]},
+  { path: 'feedback', component: FeedbackComponent,  canActivate:[CanActivateGuard]},
+  { path: 'profilo', component: ProfiloComponent,  canActivate:[CanActivateGuard]},
+  { path: 'login', component: LoginComponent, canActivate:[CanActivateLoginGuard]},
+  { path: 'register', component: RegisterComponent, canActivate:[CanActivateLoginGuard]},
+  { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard]}
 ];
 
 @NgModule({
