@@ -1,4 +1,4 @@
-
+<div class="bg-color">
 <div class="uk-container uk-container-small">
     
         <div class="uk-position-center card-login">
@@ -22,22 +22,23 @@
     <mat-card-content >
         
         
-        <!--<form class="example-form">-->
+        <form class="example-form" [formGroup]="loginForm" (ngSubmit)="loginUser()" >
+        
             
                 
                    
                     <mat-form-field class="example-full-width" appearance="fill" >
                     <mat-label class="username">Nome Utente</mat-label><br>
-                        <input matInput  type ="text" placeholder="Mario Rossi" class="username">
+                        <input matInput  type ="text" placeholder="Mario Rossi" class="username" formControlName="username">
                     <mat-icon matPrefix class="icons">
                         account_box
                     </mat-icon>
-                    </mat-form-field>   <!--[formControl]="emailFormControl"  -->
+                    </mat-form-field>   
                     <br>
                     
                     <mat-form-field class="example-full-width"  appearance="fill">
                         <mat-label class="username">Enter your password</mat-label>
-                        <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password">
+                        <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password" formControlName="password">
                         <mat-icon matPrefix class="icons">
                             https
                         </mat-icon>
@@ -50,8 +51,8 @@
                     
                     <br>
                 <mat-slide-toggle>Memorizza password</mat-slide-toggle>
-                <button id="pill-button" class="mat-raised-button">Accedi</button>
-       <!-- </form>-->
+                <input id="pill-button" class="mat-raised-button" value="Accedi" type="submit" [disabled]="loginForm.status === 'INVALID'">
+        </form>
         
         
     </mat-card-content>
@@ -61,9 +62,10 @@
 </mat-card>
 <span class="done">
     <button mat-fab color="primary">
-    <mat-icon matTooltip="registrati"><a href="/register">add</a></mat-icon>
+    <mat-icon matTooltip="registrati" ><a routerLink="/register" class="iconawhite">add</a></mat-icon>
     </button>
     </span>
 
+</div>
 </div>
 </div>

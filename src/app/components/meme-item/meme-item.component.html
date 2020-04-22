@@ -1,9 +1,15 @@
 <div *ngIf="memeItem != null || memeItem!=undefined">
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container uk-height-medium">
-      <img mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" uk-cover uk-parallax>
+      <a href="#modal-media-image-{{memeItem.id}}" uk-toggle><img mat-card-image class="memeImg" [src]="memeItem.url" alt="meme" uk-cover uk-parallax></a>
       <canvas width="600" height="400"></canvas>
     </div>
+    <div id="modal-media-image-{{memeItem.id}}" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+          <button class="uk-modal-close-outside" type="button" uk-close></button>
+          <img [src]="memeItem.url" alt="">
+      </div>
+  </div>
     <div>
       <div class="uk-card-body">
 
