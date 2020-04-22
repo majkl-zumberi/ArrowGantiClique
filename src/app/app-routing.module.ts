@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { CanActivateGuard } from './components/guard/can-activate.guard';
 import { CanActivateLoginGuard } from './components/guard/can-activate-login.guard';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'profilo', component: ProfiloComponent,  canActivate:[CanActivateGuard]},
   { path: 'login', component: LoginComponent, canActivate:[CanActivateLoginGuard]},
   { path: 'register', component: RegisterComponent, canActivate:[CanActivateLoginGuard]},
-  { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard]}
+  { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard]},
+  {path:'**',component: PageNotFoundComponent}
 ];
 
 @NgModule({
