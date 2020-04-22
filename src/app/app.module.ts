@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { MemeItemComponent } from './components/meme-item/meme-item.component';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { MemeItemComponent } from './components/meme-item/meme-item.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
