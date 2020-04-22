@@ -9,10 +9,15 @@ import { MemeInterface } from '../models/memeInterface';
 export class MemeListService {
 
   private memeListUrl:string='http://my-json-server.typicode.com/majkl-zumberi/meme-list-api/memes';
+  private memeUsersUrl:string="http://localhost:3000/users";
 
   constructor(private http:HttpClient) { }
 
   getAllMemes(page:number):Observable<MemeInterface[]>{
     return this.http.get<MemeInterface[]>(`${this.memeListUrl}?_page=${page}&_limit=5`);
+  }
+
+  getAllUsers():Observable<any>{
+    return this.http.get<any>(`${this.memeUsersUrl}`);
   }
 }
