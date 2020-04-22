@@ -1,75 +1,78 @@
 <div class="bg-color">
-    <div class="uk-container uk-container-small ">
+  <div class="uk-container uk-container-small ">
 
-        <div class="uk-position-center card-login">
-            <mat-card class="example-card" id="system">
+    <div class="uk-position-center card-login">
+      <mat-card class="example-card" id="system">
 
-                <mat-card-header style="margin-left: 100px;">
-                    <mat-card-title>
-
-
-                        <div class="example-header-image"><img src="assets/logo.JPG"></div>
-
-                        <div class="testo">
-                            Accedi
-                        </div>
+        <mat-card-header style="margin-left: 100px;">
+          <mat-card-title>
 
 
+            <div class="example-header-image"><img src="assets/logo.JPG"></div>
 
-
-                    </mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-
-
-                    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <div class="testo">
+              Accedi
+            </div>
 
 
 
 
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label class="username">Nome Utente</mat-label><br>
-                            <input matInput type="text" placeholder="Mario Rossi" class="username"
-                                formControlName="username">
-                            <mat-icon matPrefix class="icons">
-                                account_box
-                            </mat-icon>
-                        </mat-form-field>
-                        <br>
-
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label class="username">Enter your password</mat-label>
-                            <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password"
-                                formControlName="password">
-                            <mat-icon matPrefix class="icons">
-                                https
-                            </mat-icon>
-                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                                [attr.aria-pressed]="hide">
-                                <mat-icon class="icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-
-                            </button>
-                        </mat-form-field>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
 
 
-                        <br>
-                        <mat-slide-toggle>Memorizza password</mat-slide-toggle>
-                        <input id="pill-button" class="mat-raised-button" value="Accedi" type="submit"
-                            [disabled]="loginForm.status === 'INVALID'">
-                    </form>
+          <form class="example-form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
 
 
-                </mat-card-content>
+            <div class="uk-alert-danger" uk-alert *ngIf="loginError!= ''">
+                <a class="uk-alert-close" uk-close></a>
+                <p>{{ loginError }}</p>
+            </div>
+
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label class="username">Nome Utente</mat-label><br>
+              <input matInput type="text" placeholder="Mario Rossi" class="username" formControlName="username">
+              <mat-icon matPrefix class="icons">
+                account_box
+              </mat-icon>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label class="username">Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" class="username" placeholder="Password"
+                formControlName="password">
+              <mat-icon matPrefix class="icons">
+                https
+              </mat-icon>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon class="icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+              </button>
+            </mat-form-field>
+
+
+            <br>
+            <mat-slide-toggle>Memorizza password</mat-slide-toggle>
+            <input id="pill-button" class="mat-raised-button" value="Accedi" type="submit"
+              [disabled]="loginForm.status === 'INVALID'">
+          </form>
+
+
+        </mat-card-content>
 
 
 
-            </mat-card>
-            <span class="done">
-                <button mat-fab color="primary">
-                    <mat-icon matTooltip="Registrati"><a routerLink="/register" class="iconawhite">add</a></mat-icon>
-                </button>
-            </span>
+      </mat-card>
+      <span class="done">
+        <button mat-fab color="primary">
+          <mat-icon matTooltip="Registrati"><a routerLink="/register" class="iconawhite">add</a></mat-icon>
+        </button>
+      </span>
 
-        </div>
     </div>
+  </div>
 </div>

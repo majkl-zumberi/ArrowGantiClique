@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { MemeListService } from './meme-list.service';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { UserInterface } from '../models/UserInserface';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  users: any;
-
+  users: UserInterface[];
+  private errMessageSource=new Subject<string>();
+  errMessage$=this.errMessageSource.asObservable();
   constructor(private http:MemeListService, private router:Router) { }
 
   signIn(username:string, password:string){
@@ -21,6 +24,7 @@ export class AuthService {
         }
       });
       console.log("utente non trovato");
+      this.errMessageSource.next("utente non trovato");
     })
   }
 }
