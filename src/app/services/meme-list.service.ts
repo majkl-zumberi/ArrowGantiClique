@@ -32,6 +32,6 @@ export class MemeListService {
   }
 
   signUpNewUser(user:RegisterUserInterface):Observable<any>{
-    return this.http.put(this.memeUsersUrl , user, httpOptions);
+    return this.http.post(this.memeUsersUrl , user, httpOptions);
   }
 }

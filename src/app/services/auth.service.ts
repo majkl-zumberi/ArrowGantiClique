@@ -21,6 +21,10 @@ export class AuthService {
         console.log(user);
         if (username == user.username && password == user.password){
           console.log("utente trovato, pronto per il login");
+          let UserLogged: RegisterUserInterface= {
+            username: username, password: password
+          };
+          sessionStorage.setItem("utente", JSON.stringify(UserLogged));
           this.router.navigateByUrl("/home");
         }
       });
@@ -38,6 +42,8 @@ export class AuthService {
     this.http.signUpNewUser(newUser).subscribe(utenteRegistrato=>{
       console.log("sto registrando un utente nuovo");
       console.log(utenteRegistrato);
+      sessionStorage.setItem("utente", JSON.stringify(newUser));
+      this.router.navigateByUrl("/home");
     });
   }
 }
