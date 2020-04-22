@@ -6,8 +6,19 @@
 .grid-container-homepage {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
+    grid-template-rows: 50% 50%;
     margin: 1em 1em;
+    h1{
+        font-size: 5em;
+        margin-bottom: .9em;
+        margin-top: .5em; 
+        text-transform: capitalize;
+        color: white;
+    }
+    p{
+        font-size: 4em;
+        line-height: 1em;
+    }
 }
 
 .grid-item-homepage-1 {
@@ -20,6 +31,12 @@
 .grid-item-homepage-2 {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: flex-end;
 }
+.uk-slideshow-items {
+
+    min-height: 90vh !important;
+}
+
