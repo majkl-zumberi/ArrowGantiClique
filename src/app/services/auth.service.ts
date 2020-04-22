@@ -9,14 +9,12 @@ export class AuthService {
 
   constructor(private http:MemeListService) { }
 
-  storeUsers(){
-    this.http.getAllUsers().subscribe(users=>{
-      console.log(users);
-      this.users=users;
-    })
-  }
-
   signIn(username:string, password:string){
-    this.storeUsers();
+    this.http.getAllUsers().subscribe(users=>{
+      users.forEach(user => {
+        console.log(user);
+      });
+     
+    })
   }
 }
