@@ -73,7 +73,9 @@ export class MemeListComponent implements OnInit {
       this.memes=favMemes;
     })
   }
-
+  filterByHidden(){
+    console.log("qui mostro tutti i post che ha nascosto l'utente");
+  }
   initPosts(){
     console.log("reimposto tutti i post..");
     this.ngOnInit();

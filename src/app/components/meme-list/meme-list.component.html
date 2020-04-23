@@ -3,7 +3,7 @@
     <mat-chip-list aria-label="Fish selection">
       <mat-chip color="primary" (click)="initPosts()" [selected]="isActiveTutti">Tutti</mat-chip>
       <mat-chip (click)="filterByFav()" [selected]="isActiveFav">Preferiti</mat-chip>
-      <mat-chip [selected]="isActiveHidden">Nascosti</mat-chip>
+      <mat-chip (click)="filterByHidden()" [selected]="isActiveHidden">Nascosti</mat-chip>
     </mat-chip-list>
   </div>
   <app-meme-item *ngFor="let meme of memes" [memeItem]="meme" ></app-meme-item>
