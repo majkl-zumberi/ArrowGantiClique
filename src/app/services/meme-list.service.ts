@@ -17,6 +17,7 @@ const httpOptions= {
 
 
 export class MemeListService {
+
 //old http://my-json-server.typicode.com/majkl-zumberi/meme-list-api/memes
   private dbUrl:string='http://localhost:3000';
   private memeListUrl:string='http://localhost:3000/memes';
@@ -25,6 +26,7 @@ export class MemeListService {
 
   constructor(private http:HttpClient) { }
 
+  //by page
   getAllMemes(page:number):Observable<MemeInterface[]>{
     return this.http.get<MemeInterface[]>(`${this.memeListUrl}?_page=${page}&_limit=5`);
   }
@@ -47,5 +49,12 @@ export class MemeListService {
 
   getAllFav(idUtente:number,idPost):Observable<any>{
     return this.http.get<any>(`${this.memeFavUrl}?idUtente=${idUtente}&idPost=${idPost}`);
+  }
+
+  getFilterListByFav(idUser: number):Observable<any> {
+    return this.http.get<any>(`${this.memeFavUrl}?idUtente=${idUser}`);
+  }
+  getAllMemesNotByPage():Observable<MemeInterface[]>{
+    return this.http.get<MemeInterface[]>(this.memeListUrl);
   }
 }
