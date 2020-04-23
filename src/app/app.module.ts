@@ -16,6 +16,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { MemeItemComponent } from './components/meme-item/meme-item.component';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     RegisterComponent,
     EditProfileComponent,
     MemeItemComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CardsComponent
     
   ],
   imports: [
