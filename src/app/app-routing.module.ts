@@ -10,6 +10,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { CanActivateGuard } from './components/guard/can-activate.guard';
 import { CanActivateLoginGuard } from './components/guard/can-activate-login.guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate:[CanActivateLoginGuard]},
   { path: 'register', component: RegisterComponent, canActivate:[CanActivateLoginGuard]},
   { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard]},
+  { path: 'cards', component: CardsComponent, canActivate:[CanActivateGuard]},
   {path:'**',component: PageNotFoundComponent}
 ];
 
