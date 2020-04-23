@@ -21,15 +21,19 @@ export class AppComponent {
             label: 'memes',
             link: './memes',
             index: 1
-        }, {
+        },{
+            label: 'cards',
+            link: './cards',
+            index: 2
+        },{
             label: 'FeedBack',
             link: './feedback',
-            index: 2
+            index: 3
         }, 
          {
             label: 'Profilo',
             link: './profilo',
-            index: 3
+            index: 4
         }, 
     ];
 }
