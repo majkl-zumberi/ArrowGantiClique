@@ -1,9 +1,9 @@
 <div class="uk-container uk-container-large">
   <div class="filterList">
     <mat-chip-list aria-label="Fish selection">
-      <mat-chip color="primary" selected>Tutti</mat-chip>
-      <mat-chip>Preferiti</mat-chip>
-      <mat-chip>Nascosti</mat-chip>
+      <mat-chip color="primary" (click)="initPosts()" [selected]="isActiveTutti">Tutti</mat-chip>
+      <mat-chip (click)="filterByFav()" [selected]="isActiveFav">Preferiti</mat-chip>
+      <mat-chip [selected]="isActiveHidden">Nascosti</mat-chip>
     </mat-chip-list>
   </div>
   <app-meme-item *ngFor="let meme of memes" [memeItem]="meme" ></app-meme-item>
