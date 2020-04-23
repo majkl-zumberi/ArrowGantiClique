@@ -8,23 +8,31 @@ import { MemeInterface } from 'src/app/models/memeInterface';
   styleUrls: ['./meme-list.component.scss']
 })
 export class MemeListComponent implements OnInit {
-
+  isActiveTutti:boolean;
+  isActiveFav:boolean;
+  isActiveHidden:boolean;
+  isInPreferiti:boolean=false;
   memes:MemeInterface[];
   nextPageMemes:MemeInterface[];
   pageCounter:number=1;
   loadcontent:boolean;
-
+  allMemes:MemeInterface[];
   constructor(private listService:MemeListService) { 
   }
 
   ngOnInit(): void {
+    this.isActiveTutti=true;
+    this.isActiveFav=false;
+    this.isActiveHidden=false;
     this.loadcontent=true;
     this.listService.getAllMemes(this.pageCounter).subscribe(memes=>{
       this.memes=memes;
       console.table(this.memes);
      
     });
-    
+    this.listService.getAllMemesNotByPage().subscribe(allMemes=>{
+      this.allMemes=allMemes;
+    })
   }
 
   loadMoreContent(){
@@ -37,11 +45,38 @@ export class MemeListComponent implements OnInit {
           this.loadcontent=false;
         }else{
           memes.forEach(meme=>{
-            this.memes.push(meme);
+              this.memes.push(meme);
           })
         }
       })
     }
+  }
+  filterByFav(){
+    this.isActiveTutti=false;
+    this.isActiveHidden=false;
+    this.isActiveFav=true;
+    this.loadcontent=false;
+    this.isInPreferiti=true;
+    console.log("pronto per filtrare la lista in base ai preferiti");
+    let currentUser=JSON.parse(sessionStorage.getItem("utente")).id;
+    this.listService.getFilterListByFav(currentUser)
+    .subscribe(filteredPosts=>{
+      let favMemes=[];
+      console.table(filteredPosts);
+      this.allMemes.forEach(meme=>{
+        filteredPosts.forEach(post=>{
+          if(post.idPost == meme.id){
+            favMemes.push(meme);
+          }
+        })
+      })
+      this.memes=favMemes;
+    })
+  }
+
+  initPosts(){
+    console.log("reimposto tutti i post..");
+    this.ngOnInit();
   }
 
 }
