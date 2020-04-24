@@ -1,12 +1,11 @@
 <nav mat-tab-nav-bar *ngIf="currentRoute!== '/login' ">
-  <ng-container *ngIf="currentRoute!== '/register'">
-    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive"
-      [active]="rla.isActive">
+    <ng-container *ngIf="currentRoute!== '/register'">
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
       {{link.label}}
     </a>
-    <button mat-button>Esci</button>
-    <div class="spacer"></div>
-    <img src="https://img.icons8.com/color/48/000000/trollface.png" />
-  </ng-container>
+        <button mat-button (click)='signOut()'>Esci</button>
+        <div class="spacer"></div>
+        <img src="https://img.icons8.com/color/48/000000/trollface.png" />
+    </ng-container>
 </nav>
 <router-outlet></router-outlet>

@@ -44,4 +44,8 @@ export class AuthService {
       this.router.navigateByUrl("/login");
     });
   }
+  logOut(){
+    sessionStorage.removeItem('utente');
+    this.router.navigateByUrl("/login");
+  }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   navLinks: any[];
   activeLinkIndex = -1; 
   currentRoute: string;
-  constructor(private router: Router) {
+  constructor(private router: Router, private auth:AuthService) {
     this.navLinks = [
         {
             label: 'Homepage',
@@ -43,5 +44,8 @@ ngOnInit(): void {
       this.currentRoute=this.router.url.toString();
   });
   
+}
+signOut(){
+    this.auth.logOut();
 }
 }
