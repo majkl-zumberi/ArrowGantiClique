@@ -35,7 +35,7 @@ export class AuthService {
   signUp(username:string, password:string){
     console.log(`username: ${username} , password: ${password}`);
     let newUser: RegisterUserInterface= {
-      username: username, password:password, hidden:[], nome:"", cognome:"", sesso:"", email:"", telefono:""
+      username: username, password:password, nome:"", cognome:"", sesso:"", email:"", telefono:""
     };
     console.log(newUser);
     this.http.signUpNewUser(newUser).subscribe(utenteRegistrato=>{
