@@ -18,11 +18,11 @@ export class AppComponent {
             link: './home',
             index: 0
         }, {
-            label: 'memes',
+            label: 'Memes',
             link: './memes',
             index: 1
         },{
-            label: 'cards',
+            label: 'Cards',
             link: './cards',
             index: 2
         },{
