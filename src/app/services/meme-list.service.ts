@@ -23,7 +23,7 @@ export class MemeListService {
   private memeListUrl:string='http://localhost:3000/memes';
   private memeUsersUrl:string="http://localhost:3000/users";
   private memeFavUrl:string="http://localhost:3000/favorites";
-
+  private filterGlobal:string='?q=';
   constructor(private http:HttpClient) { }
 
   //by page
@@ -65,5 +65,8 @@ export class MemeListService {
   }
   getMemeById(id:number):Observable<MemeInterface>{
     return this.http.get<MemeInterface>(`${this.memeListUrl}/${id}`);
+  }
+  filterMemeByText(searchBy:string):Observable<MemeInterface[]>{
+    return this.http.get<MemeInterface[]>(`${this.memeListUrl}${this.filterGlobal}${searchBy}`);
   }
 }

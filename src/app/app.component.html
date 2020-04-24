@@ -4,6 +4,12 @@
       {{link.label}}
     </a>
         <button mat-button (click)='signOut()'>Esci</button>
+        <ng-container *ngIf="currentRoute == '/memes'">
+            <mat-form-field appearance="fill" class="cerca">
+                <mat-label>cerca</mat-label>
+                <input matInput #filterInput (change)="filter(filterInput.value)">
+              </mat-form-field>
+        </ng-container>
         <div class="spacer"></div>
         <img src="../assets/logo.png" />
     </ng-container>
