@@ -12,6 +12,7 @@ import { CanActivateLoginGuard } from './components/guard/can-activate-login.gua
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { CanDeactivateEditProfileGuard } from './components/guard/can-deactivate-edit-profile.guard';
+import { MemeDetailComponent } from './components/meme-detail/meme-detail.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent, canActivate:[CanActivateLoginGuard]},
   { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard],canDeactivate:[CanDeactivateEditProfileGuard]},
   { path: 'cards', component: CardsComponent, canActivate:[CanActivateGuard]},
+  {path:'detail/:id',component: MemeDetailComponent},
   {path:'**',component: PageNotFoundComponent}
 ];
 

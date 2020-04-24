@@ -63,4 +63,7 @@ export class MemeListService {
     return this.http.patch<UserInterface>(url, User, httpOptions);
 
   }
+  getMemeById(id:number):Observable<MemeInterface>{
+    return this.http.get<MemeInterface>(`${this.memeListUrl}/${id}`);
+  }
 }
