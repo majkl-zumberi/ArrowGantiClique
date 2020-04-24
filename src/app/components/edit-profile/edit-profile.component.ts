@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { UserInterface } from 'src/app/models/UserInserface';
 import { MemeListService } from 'src/app/services/meme-list.service';
 import { Router } from '@angular/router';
+import { EditFormInterface } from 'src/app/models/EditFormInterface';
 
 @Component({
   selector: 'app-edit-profile',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class EditProfileComponent implements OnInit {
   currentUser: UserInterface;
   editForm: FormGroup;
+  infoUtenteForm: EditFormInterface;
 
 
   get nameControl():FormControl{
@@ -33,16 +35,35 @@ export class EditProfileComponent implements OnInit {
   get telControl():FormControl{
     return this.editForm.get('editTel') as FormControl;
     }
+  
+  get formValues():EditFormInterface{
+    let form:EditFormInterface={
+      nome:this.nameControl.value,
+      cognome:this.surnameControl.value,
+      sesso:this.genderControl.value,
+      email:this.emailControl.value,
+      telefono:this.telControl.value
+    }
+    return form;
+  }
 
 
   constructor(private fb:FormBuilder, private listService:MemeListService, private router:Router) {
 
+    let infoUtente = JSON.parse( sessionStorage.getItem('utente'));
+    this.infoUtenteForm={
+      nome:infoUtente.nome,
+      cognome:infoUtente.cognome,
+      sesso:infoUtente.sesso,
+      email:infoUtente.email,
+      telefono:infoUtente.telefono
+    };
     this.editForm = this.fb.group({
-      editName:[""],
-      editSurname:[""],
-      editGender:[""],
-      editEmail:[""],
-      editTel:[""]
+      editName:[infoUtente.nome],
+      editSurname:[infoUtente.cognome],
+      editGender:[infoUtente.sesso],
+      editEmail:[infoUtente.email],
+      editTel:[infoUtente.telefono]
     })
 
    }
@@ -50,6 +71,7 @@ export class EditProfileComponent implements OnInit {
   ngOnInit(): void {
 
     this.currentUser = JSON.parse( sessionStorage.getItem('utente'));
+
   }
 
   editUser(){
