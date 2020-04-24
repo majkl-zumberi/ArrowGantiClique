@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { UserInterface } from 'src/app/models/UserInserface';
 import { MemeListService } from 'src/app/services/meme-list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-profile',
@@ -9,6 +10,7 @@ import { MemeListService } from 'src/app/services/meme-list.service';
   styleUrls: ['./edit-profile.component.scss']
 })
 export class EditProfileComponent implements OnInit {
+  currentUser: UserInterface;
   editForm: FormGroup;
 
 
@@ -33,7 +35,7 @@ export class EditProfileComponent implements OnInit {
     }
 
 
-  constructor(private fb:FormBuilder, private listService:MemeListService) {
+  constructor(private fb:FormBuilder, private listService:MemeListService, private router:Router) {
 
     this.editForm = this.fb.group({
       editName:[""],
@@ -46,6 +48,8 @@ export class EditProfileComponent implements OnInit {
    }
 
   ngOnInit(): void {
+
+    this.currentUser = JSON.parse( sessionStorage.getItem('utente'));
   }
 
   editUser(){
@@ -75,7 +79,9 @@ export class EditProfileComponent implements OnInit {
     sessionStorage.setItem('utente', JSON.stringify(User));
     this.listService.updateUser(User, idUser).subscribe(user => {
       console.log("utente aggiornato con successo zio");
+      this.router.navigateByUrl('/profilo');
     })
+
     
   }
 
