@@ -62,7 +62,7 @@
               <ul class="uk-nav uk-dropdown-nav">
                   <li><a [routerLink]="['/detail', memeItem.id]" >visualizza dettaglio</a></li>
                   <li class="uk-nav-divider"></li>
-                  <li><a href="#">nascondi</a></li>
+                  <li><a (click)="hideMeme(memeItem.id)">nascondi</a></li>
               </ul>
           </div>
           </div>
