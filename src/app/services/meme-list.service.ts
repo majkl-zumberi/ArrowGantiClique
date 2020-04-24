@@ -57,4 +57,10 @@ export class MemeListService {
   getAllMemesNotByPage():Observable<MemeInterface[]>{
     return this.http.get<MemeInterface[]>(this.memeListUrl);
   }
+
+  updateUser(User:UserInterface, id:number):Observable<UserInterface>{
+    const url=`${this.memeUsersUrl}/${id}`;
+    return this.http.patch<UserInterface>(url, User, httpOptions);
+
+  }
 }
