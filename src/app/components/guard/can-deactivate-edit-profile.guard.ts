@@ -15,7 +15,7 @@ export class CanDeactivateEditProfileGuard implements CanDeactivate<EditProfileC
     
       console.log(component.editForm.status);
 
-      if(component.editForm.dirty){ 
+      if(component.editForm.dirty && !component.canExit){ 
         if(!(JSON.stringify(component.infoUtenteForm)===JSON.stringify(component.formValues))){
           
        //   alert(JSON.stringify(component.infoUtenteForm)===JSON.stringify(component.formValues));
@@ -35,6 +35,9 @@ export class CanDeactivateEditProfileGuard implements CanDeactivate<EditProfileC
         
         
   
+    }
+    else{
+      return true;
     }
 
 

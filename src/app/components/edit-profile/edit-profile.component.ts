@@ -14,6 +14,7 @@ export class EditProfileComponent implements OnInit {
   currentUser: UserInterface;
   editForm: FormGroup;
   infoUtenteForm: EditFormInterface;
+  canExit:boolean=false;
 
 
   get nameControl():FormControl{
@@ -67,6 +68,7 @@ export class EditProfileComponent implements OnInit {
     })
 
    }
+   
 
   ngOnInit(): void {
 
@@ -74,7 +76,13 @@ export class EditProfileComponent implements OnInit {
 
   }
 
+  exit(){
+    this.canExit=true;
+    this.router.navigateByUrl('/profilo');
+  }
+
   editUser(){
+    this.canExit=true;
     console.log("pronto per la submit della form");
     console.log(this.nameControl.value);
     console.log(this.surnameControl.value);
