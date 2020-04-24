@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MemeInterface } from 'src/app/models/memeInterface';
 import { MemeListService } from 'src/app/services/meme-list.service';
 import { Session } from 'protractor';
@@ -14,6 +14,7 @@ export class MemeItemComponent implements OnInit {
   favMemes:any;
   isinFavorite:boolean=false;
   userId: number;
+  @Output() hideMemeEmitter=new EventEmitter<number>();
   constructor(private http:MemeListService) {
     this.userId=JSON.parse(sessionStorage.getItem("utente")).id;
   }
@@ -29,6 +30,10 @@ export class MemeItemComponent implements OnInit {
 
   hideMeme(memeId:number){
     console.log("pronto per nascondere l'id"+memeId);
+    this.http.setHide({"idUtente":JSON.parse(sessionStorage.getItem("utente")).id ,"idPost":this.memeItem.id}).subscribe(ritorno=>{
+      console.log(ritorno);
+      this.hideMemeEmitter.emit(memeId);
+    });
   }
   setToFavorite(memeId:number){
     console.log("pronto per mettere/togliere preferiti l'id"+memeId);
