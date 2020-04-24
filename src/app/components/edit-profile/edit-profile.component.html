@@ -2,34 +2,39 @@
     <h2 class="h2-profile-1">Benvenuto</h2>
     <h2 class="h2-profile-2"><b>Luca Alicata</b></h2>
     <img class="avatar-image" width="140" height="140" src="../../../assets/avatar.png">
-    <form class="example-form">
+    <form [formGroup]="editForm" (ngSubmit)="editUser()" class="example-form">
         <div class="input-container">
             <mat-form-field id="white-just-make-it-white-please-1" class="example-full-width" appearance="fill">
                 <mat-label>Nome</mat-label>
-                <input id="white-just-make-it-white-please" type="text" matInput placeholder="Luca">
+                <input id="white-just-make-it-white-please" type="text" matInput placeholder="Mario" formControlName="editName">
             </mat-form-field>
 
             <mat-form-field id="white-just-make-it-white-please" class="example-full-width" appearance="fill">
                 <mat-label>Cognome</mat-label>
-                <input type="text" matInput placeholder="Alicata">
+                <input type="text" matInput placeholder="Rossi" formControlName="editSurname">
             </mat-form-field>
 
             <mat-form-field id="white-just-make-it-white-please" class="example-full-width" appearance="fill">
-                <mat-label>Gender</mat-label>
-                <input type="text" matInput placeholder="Maschio">
+                <mat-label>Sesso</mat-label>
+                    <mat-select #fontSize value="16px" formControlName="editGender">
+                        <mat-option value="tanto">Tanto</mat-option>
+                        <mat-option value="clown">Clown</mat-option>
+                        <mat-option value="mememaster">MemeMaster</mat-option>
+                    </mat-select >
             </mat-form-field>
 
             <mat-form-field id="white-just-make-it-white-please" class="example-full-width" appearance="fill">
                 <mat-label>Email</mat-label>
-                <input type="email" matInput placeholder="Luca@gmail.com">
+                <input type="email" matInput placeholder="email@something.it" formControlName="editEmail">
             </mat-form-field>
 
             <mat-form-field id="white-just-make-it-white-please" class="example-full-width" appearance="fill">
                 <mat-label>Telefono</mat-label>
-                <input type="tel" matInput placeholder="345 678 9012">
+                <input type="tel" matInput placeholder="123 456 789" formControlName="editTel">
             </mat-form-field>
         </div>
-        <button id="pill-button-1" class="mat-raised-button">Annulla</button> <button id="pill-button-1" class="mat-raised-button">Conferma</button>
+        <button id="pill-button-1" class="mat-raised-button">Annulla</button>
+        <input id="pill-button-1" class="mat-raised-button" type="submit" value="Conferma"> 
     </form>
 
 
