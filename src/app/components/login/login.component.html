@@ -8,7 +8,7 @@
           <mat-card-title>
 
 
-            <div class="example-header-image"><img src="assets/logo.JPG"></div>
+            <div class="example-header-image"><img src="assets/doge.png"></div>
 
             <div class="testo">
               Accedi
@@ -26,13 +26,13 @@
 
 
             <div class="uk-alert-danger" uk-alert *ngIf="loginError!= ''">
-                <a class="uk-alert-close" uk-close></a>
-                <p>{{ loginError }}</p>
+              <a class="uk-alert-close" uk-close></a>
+              <p>{{ loginError }}</p>
             </div>
 
 
             <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label class="username">Nome Utente</mat-label><br>
+              <mat-label class="username">Nome Utente</mat-label>
               <input matInput type="text" placeholder="Mario Rossi" class="username" formControlName="username">
               <mat-icon matPrefix class="icons">
                 account_box

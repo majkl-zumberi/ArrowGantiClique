@@ -54,10 +54,17 @@
                 
               </ul>
             </div>
-            <button (click)="hideMeme(memeItem.id)" mat-icon-button
+            <button  mat-icon-button
               aria-label="Example icon button with a vertical three dot icon">
               <mat-icon>more_vert</mat-icon>
             </button>
+            <div uk-dropdown>
+              <ul class="uk-nav uk-dropdown-nav">
+                  <li><a [routerLink]="['/detail', memeItem.id]" >visualizza dettaglio</a></li>
+                  <li class="uk-nav-divider"></li>
+                  <li><a href="#">nascondi</a></li>
+              </ul>
+          </div>
           </div>
         </div>
       </div>

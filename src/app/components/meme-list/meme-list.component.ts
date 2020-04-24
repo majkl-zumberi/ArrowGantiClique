@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MemeListService } from 'src/app/services/meme-list.service';
 import { MemeInterface } from 'src/app/models/memeInterface';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-meme-list',
   templateUrl: './meme-list.component.html',
-  styleUrls: ['./meme-list.component.scss']
+  styleUrls: ['./meme-list.component.scss'],
 })
 export class MemeListComponent implements OnInit {
   isActiveTutti:boolean;
@@ -17,7 +18,7 @@ export class MemeListComponent implements OnInit {
   pageCounter:number=1;
   loadcontent:boolean;
   allMemes:MemeInterface[];
-  constructor(private listService:MemeListService) { 
+  constructor(private listService:MemeListService,private serviceConnector:FilterService) { 
   }
 
   ngOnInit(): void {
@@ -33,6 +34,16 @@ export class MemeListComponent implements OnInit {
     this.listService.getAllMemesNotByPage().subscribe(allMemes=>{
       this.allMemes=allMemes;
     })
+
+    this.serviceConnector.val$.subscribe(text=>{
+      console.log(`sto ricevendo dal service connector: ${text}`);
+      this.listService.filterMemeByText(text).subscribe(listaFiltrata=>{
+        this.memes=listaFiltrata;
+        console.log("nuova lista filtrata");
+        console.log(listaFiltrata);
+      })
+    })
+
   }
 
   loadMoreContent(){
