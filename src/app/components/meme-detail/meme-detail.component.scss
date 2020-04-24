@@ -33,6 +33,12 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    .detail-name{
+        h1{
+            line-height: 1em!important;
+        }
+    }
+   
 }
 
 .mini-detail-card {
@@ -66,4 +72,7 @@
 
 .detail-p>h2 {
     color: white;
+}
+#sas{
+    line-height: 1em
 }
