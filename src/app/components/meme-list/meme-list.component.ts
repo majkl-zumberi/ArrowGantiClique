@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MemeListService } from 'src/app/services/meme-list.service';
 import { MemeInterface } from 'src/app/models/memeInterface';
 import { FilterService } from 'src/app/services/filter.service';
+import { HidFavInterface } from 'src/app/models/HidFavInterface';
 
 @Component({
   selector: 'app-meme-list',
@@ -18,6 +19,7 @@ export class MemeListComponent implements OnInit {
   pageCounter:number=1;
   loadcontent:boolean;
   allMemes:MemeInterface[];
+  hiddenPosts: HidFavInterface[];
   constructor(private listService:MemeListService,private serviceConnector:FilterService) { 
   }
 
@@ -29,8 +31,15 @@ export class MemeListComponent implements OnInit {
     this.listService.getAllMemes(this.pageCounter).subscribe(memes=>{
       this.memes=memes;
       console.table(this.memes);
-     
+      this.listService.getAllHidden(JSON.parse(sessionStorage.getItem('utente')).id).subscribe(hiddenPosts=>{
+        this.hiddenPosts=hiddenPosts;
+        console.table(this.hiddenPosts);
+        this.hiddenPosts.forEach(hidden=>{
+          this.memes = this.memes.filter(obj => obj.id !== hidden.idPost);
+        })
+      })
     });
+    
     this.listService.getAllMemesNotByPage().subscribe(allMemes=>{
       this.allMemes=allMemes;
     })
@@ -55,9 +64,13 @@ export class MemeListComponent implements OnInit {
           console.log("non ci sono altri memes da caricare!");
           this.loadcontent=false;
         }else{
+          
           memes.forEach(meme=>{
               this.memes.push(meme);
-          })
+          });
+          this.hiddenPosts.forEach(hidden=>{
+            this.memes = this.memes.filter(obj => obj.id !== hidden.idPost);
+          });
         }
       })
     }
@@ -86,10 +99,26 @@ export class MemeListComponent implements OnInit {
   }
   filterByHidden(){
     console.log("qui mostro tutti i post che ha nascosto l'utente");
+    this.isActiveTutti=false;
+    this.isActiveHidden=true;
+    this.isActiveFav=false;
+    this.loadcontent=false;
+    this.isInPreferiti=false;
+    let tempMeme:MemeInterface[];
+    this.memes=[];
+    this.hiddenPosts.forEach(hidden=>{
+      tempMeme= this.allMemes.filter(obj => obj.id == hidden.idPost);
+      this.memes.push(tempMeme[0]);
+    })
   }
   initPosts(){
     console.log("reimposto tutti i post..");
     this.ngOnInit();
+  }
+
+  removeFromList(idList){
+    console.log("ho ricevuto dal child l'id da nascondere "+idList);
+    this.memes = this.memes.filter(obj => obj.id !== idList);
   }
 
 }
