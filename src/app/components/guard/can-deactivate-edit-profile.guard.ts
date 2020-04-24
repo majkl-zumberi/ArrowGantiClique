@@ -15,10 +15,10 @@ export class CanDeactivateEditProfileGuard implements CanDeactivate<EditProfileC
     
       console.log(component.editForm.status);
 
-      if(component.editForm.dirty){
-        if(component.formValues!=component.infoUtenteForm){
+      if(component.editForm.dirty){ 
+        if(!(JSON.stringify(component.infoUtenteForm)===JSON.stringify(component.formValues))){
           
-          alert(component.infoUtenteForm==component.formValues);
+       //   alert(JSON.stringify(component.infoUtenteForm)===JSON.stringify(component.formValues));
 
           let discardChanges=confirm('sicuro di non voler salvare le modifiche?');
           
