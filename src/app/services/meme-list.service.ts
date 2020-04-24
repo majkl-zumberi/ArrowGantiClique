@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { MemeInterface } from '../models/memeInterface';
 import { UserInterface } from '../models/UserInserface';
 import { RegisterUserInterface } from '../models/RegisterUserInterface';
+import { HidFavInterface } from '../models/HidFavInterface';
 
 const httpOptions= {
   headers: new HttpHeaders({
@@ -23,6 +24,7 @@ export class MemeListService {
   private memeListUrl:string='http://localhost:3000/memes';
   private memeUsersUrl:string="http://localhost:3000/users";
   private memeFavUrl:string="http://localhost:3000/favorites";
+  private memeHiddenUrl:string="http://localhost:3000/hidden";
   private filterGlobal:string='?q=';
   constructor(private http:HttpClient) { }
 
@@ -68,5 +70,11 @@ export class MemeListService {
   }
   filterMemeByText(searchBy:string):Observable<MemeInterface[]>{
     return this.http.get<MemeInterface[]>(`${this.memeListUrl}${this.filterGlobal}${searchBy}`);
+  }
+  setHide(fav):Observable<any>{
+    return this.http.post(`${this.memeHiddenUrl}`,fav, httpOptions)
+  }
+  getAllHidden(idUtente):Observable<HidFavInterface[]>{
+    return this.http.get<HidFavInterface[]>(`${this.memeHiddenUrl}?IdUtente=${idUtente}`);
   }
 }
