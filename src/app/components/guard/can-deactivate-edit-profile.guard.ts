@@ -16,8 +16,22 @@ export class CanDeactivateEditProfileGuard implements CanDeactivate<EditProfileC
       console.log(component.editForm.status);
 
       if(component.editForm.dirty){
-        alert("la form è sporca");
+        if(component.formValues!=component.infoUtenteForm){
+          
+          alert(component.infoUtenteForm==component.formValues);
+
+          let discardChanges=confirm('sicuro di non voler salvare le modifiche?');
+          
+          if(discardChanges){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      else{
         return true;
+      }
         
         
   

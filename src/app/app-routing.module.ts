@@ -11,6 +11,7 @@ import { CanActivateGuard } from './components/guard/can-activate.guard';
 import { CanActivateLoginGuard } from './components/guard/can-activate-login.guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { CanDeactivateEditProfileGuard } from './components/guard/can-deactivate-edit-profile.guard';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'profilo', component: ProfiloComponent,  canActivate:[CanActivateGuard]},
   { path: 'login', component: LoginComponent, canActivate:[CanActivateLoginGuard]},
   { path: 'register', component: RegisterComponent, canActivate:[CanActivateLoginGuard]},
-  { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard]},
+  { path: 'editProfile', component: EditProfileComponent, canActivate:[CanActivateGuard],canDeactivate:[CanDeactivateEditProfileGuard]},
   { path: 'cards', component: CardsComponent, canActivate:[CanActivateGuard]},
   {path:'**',component: PageNotFoundComponent}
 ];
