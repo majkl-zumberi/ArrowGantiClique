@@ -1,174 +1,179 @@
 .h2-profile-1 {
-  text-align: center;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  padding: 0;
-  margin-bottom: 0px;
-  font-weight: lighter;
-  color: white;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0;
+    margin-bottom: 0px;
+    font-weight: lighter;
+    color: white;
 }
 
 .h2-profile-2 {
-  text-align: center;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  color: white;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
 }
 
 .avatar-image {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  justify-self: center;
-  border-radius: 50%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    border-radius: 50%;
 }
 
 .flex-container-profile {
-  display: flex;
-  padding-left: 55px;
-  padding-top: 2em;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
+    display: flex;
+    padding-left: 55px;
+    padding-top: 2em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 .profile-flexitem-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-weight: lighter;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: lighter;
+    color: white;
 }
 
 .profile-flexitem-2 {
-  border-left: 1px solid white;
-  height: 320px;
-  margin-left: 20px;
-  margin-right: 20px;
+    border-left: 1px solid white;
+    height: 320px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .profile-flexitem-3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-weight: bold;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
 }
 
 #pill-button {
-  margin: 20px 0 0 0;
-  padding: 2px 70px 2px 70px;
-  cursor: pointer;
-  border-radius: 16px;
-  color: blue;
-  font-weight: lighter;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 5;
-  grid-row-end: 6;
-  justify-self: center;
+    margin: 20px 0 0 0;
+    padding: 2px 70px 2px 70px;
+    cursor: pointer;
+    border-radius: 16px;
+    color: blue;
+    font-weight: lighter;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
 }
 
 #pill-button-1 {
-  margin: 20px 0 0 38px;
-  padding: 2px 75px 2px 75px;
-  cursor: pointer;
-  border-radius: 16px;
-  color: blue;
-  font-weight: lighter;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 5;
-  grid-row-end: 6;
-  justify-self: center;
+    margin: 20px 0 0 38px;
+    padding: 2px 75px 2px 75px;
+    cursor: pointer;
+    border-radius: 16px;
+    color: blue;
+    text-decoration: none;
+    font-weight: lighter;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
 }
 
 .flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
-  justify-self: center;
-  display: flex;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    display: flex;
 }
 
 .example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
-  justify-self: center;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
 }
 
 .example-full-width {
-  width: 100%;
+    width: 100%;
 }
 
 #white-just-make-it-white-please {
-  margin-bottom: 0;
-  text-decoration-style: solid white;
+    margin-bottom: 0;
+    text-decoration-style: solid white;
 }
 
 #white-just-make-it-white-please-1 {
-  margin-top: 10px;
-  text-decoration-style: solid white;
+    margin-top: 10px;
+    text-decoration-style: solid white;
 }
 
 input::-webkit-textfield-decoration-container {
-  text-decoration-color: white;
+    text-decoration-color: white;
 }
 
 input::placeholder {
-  color: white;
-  text-decoration-style: solid white;
-  text-decoration-color: white;
+    color: white;
+    text-decoration-style: solid white;
+    text-decoration-color: white;
 }
 
 ::ng-deep.mat-focused .mat-form-field-label {
-  /*change color of label*/
-  color: white !important;
+    /*change color of label*/
+    color: white !important;
 }
+
 ::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
-  background-color: white !important;
+    /*change color of underline*/
+    background-color: white !important;
 }
+
 ::ng-deep.mat-form-field-ripple {
-  /*change color of underline when focused*/
-  background-color: white !important;
+    /*change color of underline when focused*/
+    background-color: white !important;
 }
 
 mat-label {
-  color: white;
+    color: white;
 }
 
 ::ng-deep.mat-select-value {
-  color: white;
+    color: white;
 }
+
 ::ng-deep.mat-select-arrow {
-  color: white;
+    color: white;
 }
+
 .uk-text-center {
-  color: white;
+    color: white;
 }
