@@ -22,7 +22,7 @@ export class CanDeactivateEditProfileGuard implements CanDeactivate<EditProfileC
 
           let discardChanges=confirm('sicuro di non voler salvare le modifiche?');
           
-          if(discardChanges){
+          if(discardChanges ){
           return true;
         }
         else{
