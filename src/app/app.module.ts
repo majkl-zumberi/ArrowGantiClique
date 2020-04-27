@@ -18,6 +18,7 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { MemeDetailComponent } from './components/meme-detail/meme-detail.component';
+import { MemeItemDirective } from './components/directives/meme-item.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MemeDetailComponent } from './components/meme-detail/meme-detail.compon
     MemeItemComponent,
     PageNotFoundComponent,
     CardsComponent,
-    MemeDetailComponent
+    MemeDetailComponent,
+    MemeItemDirective
     
   ],
   imports: [
