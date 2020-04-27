@@ -39,5 +39,9 @@ export class LoginComponent implements OnInit {
       console.log(message);
     });
   }
+  hideShowPassword(){
+    event.preventDefault();
+    this.hide = !this.hide;
+  }
 
 }
