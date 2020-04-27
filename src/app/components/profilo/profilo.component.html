@@ -1,6 +1,6 @@
 <div class="uk-container uk-container-small uk-position-center grid-container">
     <h2 class="h2-profile-1">Benvenuto</h2>
-    <h2 class="h2-profile-2"><b>Luca Alicata</b></h2>
+    <h2 class="h2-profile-2"><b>{{currentUser.nome}} {{currentUser.cognome}}</b></h2>
     <img class="avatar-image" width="140" height="140" src="../../../assets/avatar.png">
     <div class="flex-container-profile">
         <div class="profile-flexitem-1">
@@ -12,12 +12,12 @@
         </div>
         <div class="profile-flexitem-2"></div>
         <div class="profile-flexitem-3">
-            <p>Luca</p>
-            <p>Alicata</p>
-            <p>Maschio</p>
-            <p>Luca@gmail.com</p>
-            <p>345 678 9012</p>
+            <p>{{ currentUser.nome }}</p>
+            <p>{{ currentUser.cognome }}</p>
+            <p>{{ currentUser.sesso }}</p>
+            <p>{{ currentUser.email }}</p>
+            <p>{{ currentUser.telefono }}</p>
         </div>
     </div>
-    <button id="pill-button" class="mat-raised-button"><a routerLink="/editProfile" routerLinkActive="active">Modifica</a></button>
+    <a routerLink="/editProfile" routerLinkActive="active" id="pill-button" class="mat-raised-button">Modifica</a>
 </div>

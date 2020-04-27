@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MemeInterface } from 'src/app/models/memeInterface';
+import { MemeListService } from 'src/app/services/meme-list.service';
+import { Session } from 'protractor';
 
 @Component({
   selector: 'app-meme-item',
@@ -9,17 +11,44 @@ import { MemeInterface } from 'src/app/models/memeInterface';
 export class MemeItemComponent implements OnInit {
 
   @Input() memeItem:MemeInterface;
+  favMemes:any;
   isinFavorite:boolean=false;
-  constructor() { }
+  userId: number;
+  @Output() hideMemeEmitter=new EventEmitter<number>();
+  constructor(private http:MemeListService) {
+    this.userId=JSON.parse(sessionStorage.getItem("utente")).id;
+  }
 
   ngOnInit(): void {
+    console.log(`ora  l'idUtente: ${this.userId} e il postid: ${this.memeItem.id}`)
+    this.http.getAllFav(this.userId,this.memeItem.id).subscribe(favMemes=>{
+      this.favMemes=favMemes;
+      this.favMemes.length>0 ? this.isinFavorite=true :this.isinFavorite=false;
+      
+    })
   }
 
   hideMeme(memeId:number){
     console.log("pronto per nascondere l'id"+memeId);
+    this.http.setHide({"idUtente":JSON.parse(sessionStorage.getItem("utente")).id ,"idPost":this.memeItem.id}).subscribe(ritorno=>{
+      console.log(ritorno);
+      this.hideMemeEmitter.emit(memeId);
+    });
   }
   setToFavorite(memeId:number){
     console.log("pronto per mettere/togliere preferiti l'id"+memeId);
     this.isinFavorite=!this.isinFavorite;
+    console.log(`is favorite: ${this.isinFavorite}`);
+    console.log(JSON.parse(sessionStorage.getItem("utente")).id);
+    if(this.isinFavorite){
+      this.http.setFav({"idUtente":JSON.parse(sessionStorage.getItem("utente")).id ,"idPost":this.memeItem.id}).subscribe(ritorno=>{
+        console.log(ritorno);
+      });
+    }
+    else{
+      this.http.remFav(this.favMemes[0].id).subscribe(ritorno=>{
+        console.log(ritorno);
+      });
+    }
   }
 }

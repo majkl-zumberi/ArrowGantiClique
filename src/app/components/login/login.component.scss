@@ -14,7 +14,7 @@
     background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%,   rgba(0, 191, 255, 1) 89%);
     -webkit-box-shadow: -10px -10px 0px 0px #43779F;
     -moz-box-shadow: -10px -10px 0px 0px #43779F;
-    box-shadow: -10px -10px 0px 0px rgb(127,182,255);;
+    box-shadow: -10px -10px 0px 0px rgb(127,182,255);
     
 }
 
@@ -89,7 +89,6 @@
  ::ng-deep.mat-form-field-ripple {
     /*change color of underline when focused*/
     background-color: white !important;
-    ;
 }
 
 input::-webkit-input-placeholder {

@@ -1,0 +1,31 @@
+<ng-container *ngIf="memePost != null && memePost!=undefined">
+<div class="grid-wrapper-detail">
+
+    <div class="flex-detail-container-1">
+        <div class="detail-name">
+            <h1 id="sas">{{ memePost.title }}</h1>
+        </div>
+
+        <div class="detail-p">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quas rerum aperiam ea facere vel reprehenderit autem laboriosam iusto soluta cupiditate eveniet magni, repellat numquam, fugiat veritatis. In, placeat laboriosam?</h2>
+        </div>
+        <div>
+            <div class="mini-detail-card">
+                <div>
+                    <img [src]="memePost.url" alt="">
+                </div>
+                <div class="mini-p-bg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur recusandae do?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-detail-container-2">
+        <div class="thicc-image">
+            <img class="the-long-boi" [src]="memePost.url">
+        </div>
+    </div>
+
+</div>
+</ng-container>

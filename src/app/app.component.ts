@@ -1,35 +1,41 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
+import { FilterService } from './services/filter.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'ArrowGantiClique';
   navLinks: any[];
   activeLinkIndex = -1; 
   currentRoute: string;
-  constructor(private router: Router) {
+  constructor(private router: Router, private auth:AuthService,private serviceConnector:FilterService) {
     this.navLinks = [
         {
             label: 'Homepage',
             link: './home',
             index: 0
         }, {
-            label: 'memes',
+            label: 'Memes',
             link: './memes',
             index: 1
-        }, {
+        },{
+            label: 'Cards',
+            link: './cards',
+            index: 2
+        },{
             label: 'FeedBack',
             link: './feedback',
-            index: 2
+            index: 3
         }, 
          {
             label: 'Profilo',
             link: './profilo',
-            index: 3
+            index: 4
         }, 
     ];
 }
@@ -39,5 +45,12 @@ ngOnInit(): void {
       this.currentRoute=this.router.url.toString();
   });
   
+}
+signOut(){
+    this.auth.logOut();
+}
+filter(filterInput){
+    console.log("ricevo da html "+filterInput);
+    this.serviceConnector.passToComp(filterInput);
 }
 }

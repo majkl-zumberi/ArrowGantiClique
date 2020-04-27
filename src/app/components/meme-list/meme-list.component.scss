@@ -13,5 +13,10 @@
     margin: 1em auto;
 }
 .uk-container-large{
+    background: rgb(0,107,255);
+    background: linear-gradient(90deg, rgb(0, 107, 255) 0%, rgb(0, 191, 255) 89%);
+}
+.bg_color{
+    background: rgb(0,107,255);
     background: linear-gradient(90deg, rgb(0, 107, 255) 0%, rgb(0, 191, 255) 89%);
 }

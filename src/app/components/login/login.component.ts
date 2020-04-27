@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm, FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,7 @@ import {NgForm, FormGroup, FormBuilder, Validators, FormControl} from '@angular/
 })
 export class LoginComponent implements OnInit {
   hide=true;
+  loginError:string='';
   loginForm: FormGroup;
 
   get usernameControl():FormControl{
@@ -18,7 +20,7 @@ export class LoginComponent implements OnInit {
     }
 
 
-  constructor(private fb:FormBuilder) {
+  constructor(private fb:FormBuilder, private auth:AuthService) {
     this.loginForm=this.fb.group({
       username:['',Validators.required],
       password:['',Validators.required]
@@ -29,11 +31,13 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    this.usernameControl.value,
-    this.passwordControl.value
     console.log("username:"+this.usernameControl.value);
     console.log("password:"+this.passwordControl.value);
-
+    this.auth.signIn(this.usernameControl.value, this.passwordControl.value);
+    this.auth.errMessage$.subscribe(message=>{
+      this.loginError=message;
+      console.log(message);
+    });
   }
 
 }

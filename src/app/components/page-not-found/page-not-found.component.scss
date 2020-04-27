@@ -1,0 +1,25 @@
+.page-not-found-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30rem;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 6rem;
+}
+
+a {
+    background-color: white;
+    border: none;
+    padding: 25px 25px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #009Aff;
+    font-size: 2rem;
+    text-decoration: none;
+}
