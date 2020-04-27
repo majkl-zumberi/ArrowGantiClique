@@ -31,5 +31,9 @@ export class RegisterComponent implements OnInit {
   signUpUser(){
     this.http.signUp(this.usernameControl.value, this.passwordControl.value);
   }
+  hideShowPassword(){
+    event.preventDefault();
+    this.hide = !this.hide;
+  }
 
 }

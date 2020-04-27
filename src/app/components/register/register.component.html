@@ -44,7 +44,7 @@
                             <mat-icon matPrefix class="icons">
                                 https
                             </mat-icon>
-                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            <button mat-icon-button matSuffix (click)="hideShowPassword()" [attr.aria-label]="'Hide password'"
                                 [attr.aria-pressed]="hide">
                                 <mat-icon class="icons">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
 
