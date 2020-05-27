@@ -7,17 +7,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { MemeListComponent } from './components/meme-list/meme-list.component';
+import { MemeListComponent } from './features/meme/meme-list/meme-list.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { MemeItemComponent } from './components/meme-item/meme-item.component';
+import { MemeItemComponent } from './features/meme/meme-item/meme-item.component';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { MemeDetailComponent } from './components/meme-detail/meme-detail.component';
+import { MemeDetailComponent } from './features/meme/meme-detail/meme-detail.component';
 import { MemeItemDirective } from './components/directives/meme-item.directive';
 
 @NgModule({
@@ -45,7 +45,7 @@ import { MemeItemDirective } from './components/directives/meme-item.directive';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

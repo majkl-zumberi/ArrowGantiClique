@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'cards', component: CardsComponent, canActivate:[CanActivateGuard]},
   {path:'detail/:id',component: MemeDetailComponent},
   { path: 'auth', loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule), canLoad:[CanloadloginGuard] },
+  { path: 'meme', loadChildren: () => import('./features/meme/meme.module').then(m => m.MemeModule) },
   {path:'**',component: PageNotFoundComponent}
 ];
 
