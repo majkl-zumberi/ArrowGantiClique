@@ -10,8 +10,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { MemeListComponent } from './components/meme-list/meme-list.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './features/auth/login/login.component';
+import { RegisterComponent } from './features/auth/register/register.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { MemeItemComponent } from './components/meme-item/meme-item.component';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
@@ -45,6 +45,7 @@ import { MemeItemDirective } from './components/directives/meme-item.directive';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

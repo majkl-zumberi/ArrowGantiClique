@@ -41,11 +41,11 @@ export class AuthService {
     this.http.signUpNewUser(newUser).subscribe(utenteRegistrato=>{
       console.log("sto registrando un utente nuovo");
       console.log(utenteRegistrato);
-      this.router.navigateByUrl("/login");
+      this.router.navigateByUrl("/auth/login");
     });
   }
   logOut(){
     sessionStorage.removeItem('utente');
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl("/auth/login");
   }
 }

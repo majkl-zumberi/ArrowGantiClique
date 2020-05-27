@@ -16,7 +16,8 @@ export class CanActivateGuard implements CanActivate {
         return true;
       }
       else{
-        this.router.navigateByUrl('/login');
+        console.log("rimando al login")
+        this.router.navigateByUrl('/auth/login');
         return false;
       }
     }

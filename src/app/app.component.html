@@ -1,5 +1,5 @@
-<nav mat-tab-nav-bar *ngIf="currentRoute!== '/login' ">
-    <ng-container *ngIf="currentRoute!== '/register'">
+<nav mat-tab-nav-bar *ngIf="currentRoute!== '/auth/login' ">
+    <ng-container *ngIf="currentRoute!== '/auth/register'">
         <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
       {{link.label}}
     </a>
