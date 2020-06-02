@@ -2,14 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MemeRoutingModule } from './meme-routing.module';
-import { MemeComponent } from './main/meme.component';
+import { MemeComponent } from './components/main/meme.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { MemeListComponent } from './components/meme-list/meme-list.component';
+import { CardsComponent } from 'src/app/features/meme/components/cards/cards.component';
+import { MemeItemComponent } from './components/meme-item/meme-item.component';
+import { MemeItemDirective } from 'src/app/components/directives/meme-item.directive';
+import { MemeDetailComponent } from './components/meme-detail/meme-detail.component';
 
 
 @NgModule({
-  declarations: [MemeComponent],
+  declarations: [
+    MemeComponent,
+    CardsComponent,
+    MemeListComponent,
+    MemeItemComponent,
+    MemeItemDirective,
+    MemeDetailComponent],
   imports: [
     CommonModule,
-    MemeRoutingModule
+    MemeRoutingModule,
+    SharedModule
   ]
 })
 export class MemeModule { }
