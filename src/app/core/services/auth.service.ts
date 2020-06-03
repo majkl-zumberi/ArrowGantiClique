@@ -26,6 +26,7 @@ export class AuthService {
           };
           sessionStorage.setItem("utente", JSON.stringify(UserLogged));
           this.router.navigateByUrl("/homepage/home");
+          return;
         }
       });
       console.log("utente non trovato");
