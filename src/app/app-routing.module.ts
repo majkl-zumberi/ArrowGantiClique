@@ -6,16 +6,16 @@ import { ProfiloComponent } from './features/manage/components/profilo/profilo.c
 import { LoginComponent } from './features/auth/components/login/login.component';
 import { RegisterComponent } from './features/auth/components/register/register.component';
 import { EditProfileComponent } from './features/manage/components/edit-profile/edit-profile.component';
-import { CanActivateGuard } from './components/guard/can-activate.guard';
-import { CanActivateLoginGuard } from './components/guard/can-activate-login.guard';
+import { CanActivateGuard } from './core/guard/can-activate.guard';
+import { CanActivateLoginGuard } from './core/guard/can-activate-login.guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardsComponent } from './features/meme/components/cards/cards.component';
-import { CanDeactivateEditProfileGuard } from './components/guard/can-deactivate-edit-profile.guard';
+import { CanDeactivateEditProfileGuard } from './core/guard/can-deactivate-edit-profile.guard';
 
-import { CanloadloginGuard } from './components/guard/canloadlogin.guard';
+import { CanloadloginGuard } from './core/guard/canloadlogin.guard';
 import { MemeDetailComponent } from './features/meme/components/meme-detail/meme-detail.component';
 import { MemeListComponent } from './features/meme/components/meme-list/meme-list.component';
-import { CanLoadCompsGuard } from './components/guard/can-load-comps.guard';
+import { CanLoadCompsGuard } from './core/guard/can-load-comps.guard';
 
 
 const routes: Routes = [

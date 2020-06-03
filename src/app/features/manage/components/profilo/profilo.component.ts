@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserInterface } from 'src/app/models/UserInserface';
+import { UserInterface } from 'src/app/core/models/UserInserface';
 
 @Component({
   selector: 'app-profilo',

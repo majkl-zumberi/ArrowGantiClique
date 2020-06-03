@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { CoreModule } from '../core.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: CoreModule
 })
 export class FilterService {
   private valSource=new Subject<string>();

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MemeComponent } from './components/main/meme.component';
 import { MemeListComponent } from './components/meme-list/meme-list.component';
 import { CardsComponent } from 'src/app/features/meme/components/cards/cards.component';
-import { CanActivateGuard } from 'src/app/components/guard/can-activate.guard';
+import { CanActivateGuard } from 'src/app/core/guard/can-activate.guard';
 import { MemeDetailComponent } from './components/meme-detail/meme-detail.component';
 
 const routes: Routes = [

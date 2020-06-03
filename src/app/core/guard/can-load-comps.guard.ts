@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { CoreModule } from '../core.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: CoreModule
 })
 export class CanLoadCompsGuard implements CanLoad {
 

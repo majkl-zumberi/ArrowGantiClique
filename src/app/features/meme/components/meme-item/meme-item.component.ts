@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { MemeInterface } from 'src/app/models/memeInterface';
-import { MemeListService } from 'src/app/services/meme-list.service';
+import { MemeInterface } from 'src/app/core/models/memeInterface';
+import { MemeListService } from 'src/app/core/services/meme-list.service';
 import { Session } from 'protractor';
 
 @Component({

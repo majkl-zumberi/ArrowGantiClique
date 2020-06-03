@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MemeListService } from 'src/app/services/meme-list.service';
-import { MemeInterface } from 'src/app/models/memeInterface';
-import { FilterService } from 'src/app/services/filter.service';
-import { HidFavInterface } from 'src/app/models/HidFavInterface';
+import { MemeListService } from 'src/app/core/services/meme-list.service';
+import { MemeInterface } from 'src/app/core/models/memeInterface';
+import { FilterService } from 'src/app/core/services/filter.service';
+import { HidFavInterface } from 'src/app/core/models/HidFavInterface';
 
 @Component({
   selector: 'app-meme-list',

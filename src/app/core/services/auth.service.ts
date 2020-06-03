@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { UserInterface } from '../models/UserInserface';
 import { Subject } from 'rxjs';
 import { RegisterUserInterface } from '../models/RegisterUserInterface';
+import { CoreModule } from '../core.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: CoreModule
 })
 export class AuthService {
   users: UserInterface[];

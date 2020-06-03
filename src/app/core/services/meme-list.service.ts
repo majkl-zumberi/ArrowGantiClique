@@ -5,6 +5,7 @@ import { MemeInterface } from '../models/memeInterface';
 import { UserInterface } from '../models/UserInserface';
 import { RegisterUserInterface } from '../models/RegisterUserInterface';
 import { HidFavInterface } from '../models/HidFavInterface';
+import { CoreModule } from '../core.module';
 
 const httpOptions= {
   headers: new HttpHeaders({
@@ -13,7 +14,7 @@ const httpOptions= {
 };
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: CoreModule
 })
 
 

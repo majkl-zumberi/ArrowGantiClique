@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { UserInterface } from 'src/app/models/UserInserface';
-import { MemeListService } from 'src/app/services/meme-list.service';
+import { UserInterface } from 'src/app/core/models/UserInserface';
+import { MemeListService } from 'src/app/core/services/meme-list.service';
 import { Router } from '@angular/router';
-import { EditFormInterface } from 'src/app/models/EditFormInterface';
+import { EditFormInterface } from 'src/app/core/models/EditFormInterface';
 
 @Component({
   selector: 'app-edit-profile',

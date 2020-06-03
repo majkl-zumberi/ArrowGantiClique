@@ -18,6 +18,7 @@ import { CardsComponent } from './features/meme/components/cards/cards.component
 import { MemeDetailComponent } from './features/meme/components/meme-detail/meme-detail.component';
 import { MemeItemDirective } from './components/directives/meme-item.directive';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SharedModule } from './shared/shared.module';
     
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

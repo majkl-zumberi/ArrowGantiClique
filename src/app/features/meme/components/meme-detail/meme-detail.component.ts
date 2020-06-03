@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MemeListService } from 'src/app/services/meme-list.service';
+import { MemeListService } from 'src/app/core/services/meme-list.service';
 import { ActivatedRoute } from '@angular/router';
-import { MemeInterface } from 'src/app/models/memeInterface';
+import { MemeInterface } from 'src/app/core/models/memeInterface';
 
 @Component({
   selector: 'app-meme-detail',
