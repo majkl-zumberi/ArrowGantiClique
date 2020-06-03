@@ -78,7 +78,7 @@ export class EditProfileComponent implements OnInit {
 
   exit(){
     this.canExit=true;
-    this.router.navigateByUrl('/profilo');
+    this.router.navigateByUrl('/manage/profilo');
   }
 
   editUser(){
@@ -109,7 +109,7 @@ export class EditProfileComponent implements OnInit {
     sessionStorage.setItem('utente', JSON.stringify(User));
     this.listService.updateUser(User, idUser).subscribe(user => {
       console.log("utente aggiornato con successo zio");
-      this.router.navigateByUrl('/profilo');
+      this.router.navigateByUrl('/manage/profilo');
     })
 
     

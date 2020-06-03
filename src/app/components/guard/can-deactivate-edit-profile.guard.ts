@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { EditProfileComponent } from '../edit-profile/edit-profile.component';
+import { EditProfileComponent } from '../../features/manage/components/edit-profile/edit-profile.component';
 
 @Injectable({
   providedIn: 'root'

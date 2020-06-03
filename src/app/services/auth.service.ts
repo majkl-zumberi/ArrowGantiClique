@@ -24,7 +24,7 @@ export class AuthService {
             id:user.id, username: username, password: password, nome:user.nome, cognome:user.cognome, sesso:user.sesso, email:user.email, telefono:user.telefono
           };
           sessionStorage.setItem("utente", JSON.stringify(UserLogged));
-          this.router.navigateByUrl("/home");
+          this.router.navigateByUrl("/homepage/home");
         }
       });
       console.log("utente non trovato");

@@ -17,7 +17,7 @@ export class AppComponent {
     this.navLinks = [
         {
             label: 'Homepage',
-            link: './home',
+            link: './homepage/home',
             index: 0
         }, {
             label: 'Memes',
@@ -29,12 +29,12 @@ export class AppComponent {
             index: 2
         },{
             label: 'FeedBack',
-            link: './feedback',
+            link: './feed/feedback',
             index: 3
         }, 
          {
             label: 'Profilo',
-            link: './profilo',
+            link: './manage/profilo',
             index: 4
         }, 
     ];
