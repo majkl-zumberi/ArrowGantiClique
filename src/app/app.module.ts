@@ -16,7 +16,7 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CardsComponent } from './features/meme/components/cards/cards.component';
 import { MemeDetailComponent } from './features/meme/components/meme-detail/meme-detail.component';
-import { MemeItemDirective } from './components/directives/meme-item.directive';
+import { MemeItemDirective } from './shared/directives/meme-item.directive';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 

@@ -7,7 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MemeListComponent } from './components/meme-list/meme-list.component';
 import { CardsComponent } from 'src/app/features/meme/components/cards/cards.component';
 import { MemeItemComponent } from './components/meme-item/meme-item.component';
-import { MemeItemDirective } from 'src/app/components/directives/meme-item.directive';
+import { MemeItemDirective } from 'src/app/shared/directives/meme-item.directive';
 import { MemeDetailComponent } from './components/meme-detail/meme-detail.component';
 
 
@@ -17,7 +17,6 @@ import { MemeDetailComponent } from './components/meme-detail/meme-detail.compon
     CardsComponent,
     MemeListComponent,
     MemeItemComponent,
-    MemeItemDirective,
     MemeDetailComponent],
   imports: [
     CommonModule,
