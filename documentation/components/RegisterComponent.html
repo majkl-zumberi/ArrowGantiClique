@@ -1,0 +1,812 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>arrow-ganti-clique documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">arrow-ganti-clique documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RegisterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/auth/components/register/register.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-register</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./register.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./register.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#hide">hide</a>
+                            </li>
+                            <li>
+                                <a href="#signUpForm">signUpForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#hideShowPassword">hideShowPassword</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#signUpUser">signUpUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#usernameControl">usernameControl</a>
+                                </li>
+                                <li>
+                                    <a href="#passwordControl">passwordControl</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, http: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/features/auth/components/register/register.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideShowPassword"></a>
+                    <span class="name">
+                        <b>
+                            hideShowPassword
+                        </b>
+                        <a href="#hideShowPassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hideShowPassword()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/features/auth/components/register/register.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/features/auth/components/register/register.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="signUpUser"></a>
+                    <span class="name">
+                        <b>
+                            signUpUser
+                        </b>
+                        <a href="#signUpUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>signUpUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/features/auth/components/register/register.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hide"></a>
+                        <span class="name">
+                            <b>
+                            hide</b>
+                            <a href="#hide"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/features/auth/components/register/register.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="signUpForm"></a>
+                        <span class="name">
+                            <b>
+                            signUpForm</b>
+                            <a href="#signUpForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/features/auth/components/register/register.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="usernameControl"></a>
+                        <span class="name"><b>usernameControl</b><a href="#usernameControl"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>usernameControl()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/features/auth/components/register/register.component.ts:14</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="passwordControl"></a>
+                        <span class="name"><b>passwordControl</b><a href="#passwordControl"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>passwordControl()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/features/auth/components/register/register.component.ts:17</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {NgForm, FormGroup, FormBuilder, Validators, FormControl} from &#x27;@angular/forms&#x27;;
+import { AuthService } from &#x27;src/app/services/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-register&#x27;,
+  templateUrl: &#x27;./register.component.html&#x27;,
+  styleUrls: [&#x27;./register.component.scss&#x27;]
+})
+export class RegisterComponent implements OnInit {
+  hide&#x3D;true;
+  signUpForm: FormGroup;
+
+  get usernameControl():FormControl{
+    return this.signUpForm.get(&#x27;username&#x27;) as FormControl;
+    }
+    get passwordControl():FormControl{
+    return this.signUpForm.get(&#x27;password&#x27;) as FormControl;
+    }
+  
+  constructor(private fb:FormBuilder, private http:AuthService) {
+    this.signUpForm&#x3D;this.fb.group({
+      username:[&#x27;&#x27;,Validators.required],
+      password:[&#x27;&#x27;,Validators.required]
+      });
+   }
+
+  ngOnInit(): void {
+  }
+
+  signUpUser(){
+    this.http.signUp(this.usernameControl.value, this.passwordControl.value);
+  }
+  hideShowPassword(){
+    event.preventDefault();
+    this.hide &#x3D; !this.hide;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;bg-color&quot;&gt;
+    &lt;div class&#x3D;&quot;uk-container uk-container-small&quot;&gt;
+
+        &lt;div class&#x3D;&quot;uk-position-center card-login&quot;&gt;
+            &lt;mat-card class&#x3D;&quot;example-card&quot; id&#x3D;&quot;system&quot;&gt;
+
+                &lt;mat-card-header style&#x3D;&quot;margin-left: 100px;&quot;&gt;
+                    &lt;mat-card-title&gt;
+
+
+                        &lt;div class&#x3D;&quot;example-header-image&quot;&gt;&lt;img src&#x3D;&quot;assets/doge.png&quot;&gt;&lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;testo&quot;&gt;
+                            Registrati
+                        &lt;/div&gt;
+
+
+
+
+                    &lt;/mat-card-title&gt;
+                &lt;/mat-card-header&gt;
+                &lt;mat-card-content&gt;
+
+
+                    &lt;form class&#x3D;&quot;example-form&quot; [formGroup]&#x3D;&quot;signUpForm&quot; (ngSubmit)&#x3D;&quot;signUpUser()&quot;&gt;
+
+
+
+                        &lt;mat-form-field class&#x3D;&quot;example-full-width&quot; appearance&#x3D;&quot;fill&quot;&gt;
+                            &lt;mat-label class&#x3D;&quot;username&quot;&gt;Nome Utente&lt;/mat-label&gt;
+                            &lt;input matInput type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Mario Rossi&quot; class&#x3D;&quot;username&quot;
+                                formControlName&#x3D;&quot;username&quot;&gt;
+                            &lt;mat-icon matPrefix class&#x3D;&quot;icons&quot;&gt;
+                                account_box
+                            &lt;/mat-icon&gt;
+                        &lt;/mat-form-field&gt;
+                        &lt;!--[formControl]&#x3D;&quot;emailFormControl&quot;  --&gt;
+                        &lt;br&gt;
+
+                        &lt;mat-form-field class&#x3D;&quot;example-full-width&quot; appearance&#x3D;&quot;fill&quot;&gt;
+                            &lt;mat-label class&#x3D;&quot;username&quot;&gt;Enter your password&lt;/mat-label&gt;
+                            &lt;input matInput [type]&#x3D;&quot;hide ? &#x27;password&#x27; : &#x27;text&#x27;&quot; class&#x3D;&quot;username&quot; placeholder&#x3D;&quot;Password&quot;
+                                formControlName&#x3D;&quot;password&quot;&gt;
+                            &lt;mat-icon matPrefix class&#x3D;&quot;icons&quot;&gt;
+                                https
+                            &lt;/mat-icon&gt;
+                            &lt;button mat-icon-button matSuffix (click)&#x3D;&quot;hideShowPassword()&quot; [attr.aria-label]&#x3D;&quot;&#x27;Hide password&#x27;&quot;
+                                [attr.aria-pressed]&#x3D;&quot;hide&quot;&gt;
+                                &lt;mat-icon class&#x3D;&quot;icons&quot;&gt;{{hide ? &#x27;visibility_off&#x27; : &#x27;visibility&#x27;}}&lt;/mat-icon&gt;
+
+                            &lt;/button&gt;
+                        &lt;/mat-form-field&gt;
+
+
+                        &lt;br&gt;
+
+                        &lt;input id&#x3D;&quot;pill-button&quot; class&#x3D;&quot;mat-raised-button&quot; value&#x3D;&quot;Registrati&quot; type&#x3D;&quot;submit&quot;
+                            [disabled]&#x3D;&quot;signUpForm.status &#x3D;&#x3D;&#x3D; &#x27;INVALID&#x27;&quot;&gt;
+                    &lt;/form&gt;
+
+
+                &lt;/mat-card-content&gt;
+
+
+
+            &lt;/mat-card&gt;
+            &lt;span class&#x3D;&quot;done&quot;&gt;
+                &lt;button mat-fab color&#x3D;&quot;primary&quot;&gt;
+                    &lt;mat-icon matTooltip&#x3D;&quot;accedi&quot;&gt;&lt;a routerLink&#x3D;&quot;/auth/login&quot; class&#x3D;&quot;iconawhite&quot;&gt;add&lt;/a&gt;&lt;/mat-icon&gt;
+                &lt;/button&gt;
+            &lt;/span&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./register.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.example-header-image {
+    background-size: cover;
+    width: 100px;
+}
+.bg-color{
+    background-color: white;
+    height:100vh;
+}
+
+
+
+.example-card {
+    width: 300px;
+    height: 400px;
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg,  rgba(0, 191, 255, 1) 0%,  rgba(0, 107, 255, 1) 89%);
+    -webkit-box-shadow: -10px -10px 0px 0px #43779F;
+    -moz-box-shadow: -10px -10px 0px 0px #43779F;
+    box-shadow: -10px -10px 0px 0px rgb(127,182,255);;
+}
+
+.example {
+    width: 250px;
+    height: 35px;
+    background: rgb(0, 107, 255);
+    background: linear-gradient(90deg, rgba(0, 107, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.testo {
+    color: white;
+    
+}
+
+#system{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pill-button {
+    margin-top: 2em;
+    padding: 2px 70px 2px 70px;
+    cursor: pointer;
+    border-radius: 16px;
+    color: blue;
+    font-weight: lighter;
+    width:100%;
+}
+
+.card-login {
+    position: relative
+}
+
+.done {
+    position: absolute;
+    top: 40px;
+    right: -30px;
+}
+
+.icons {
+    font-size: 1.7em;
+    color: white;
+}
+
+.username {
+    color: white;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+
+ ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+ ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+    ;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+
+.iconawhite{
+    color:white!important;
+    text-decoration: none;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="bg-color">    <div class="uk-container uk-container-small">        <div class="uk-position-center card-login">            <mat-card class="example-card" id="system">                <mat-card-header style="margin-left: 100px;">                    <mat-card-title>                        <div class="example-header-image"><img src="assets/doge.png"></div>                        <div class="testo">                            Registrati                        </div>                    </mat-card-title>                </mat-card-header>                <mat-card-content>                    <form class="example-form" [formGroup]="signUpForm" (ngSubmit)="signUpUser()">                        <mat-form-field class="example-full-width" appearance="fill">                            <mat-label class="username">Nome Utente</mat-label>                            <input matInput type="text" placeholder="Mario Rossi" class="username"                                formControlName="username">                            <mat-icon matPrefix class="icons">                                account_box                            </mat-icon>                        </mat-form-field>                        <!--[formControl]="emailFormControl"  -->                        <br>                        <mat-form-field class="example-full-width" appearance="fill">                            <mat-label class="username">Enter your password</mat-label>                            <input matInput [type]="hide ? \'password\' : \'text\'" class="username" placeholder="Password"                                formControlName="password">                            <mat-icon matPrefix class="icons">                                https                            </mat-icon>                            <button mat-icon-button matSuffix (click)="hideShowPassword()" [attr.aria-label]="\'Hide password\'"                                [attr.aria-pressed]="hide">                                <mat-icon class="icons">{{hide ? \'visibility_off\' : \'visibility\'}}</mat-icon>                            </button>                        </mat-form-field>                        <br>                        <input id="pill-button" class="mat-raised-button" value="Registrati" type="submit"                            [disabled]="signUpForm.status === \'INVALID\'">                    </form>                </mat-card-content>            </mat-card>            <span class="done">                <button mat-fab color="primary">                    <mat-icon matTooltip="accedi"><a routerLink="/auth/login" class="iconawhite">add</a></mat-icon>                </button>            </span>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CardsComponent', 'selector': 'app-cards'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FeedbackComponent', 'selector': 'app-feedback'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomepageComponent', 'selector': 'app-homepage'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MemeComponent', 'selector': 'app-meme'},{'name': 'MemeDetailComponent', 'selector': 'app-meme-detail'},{'name': 'MemeItemComponent', 'selector': 'app-meme-item'},{'name': 'MemeListComponent', 'selector': 'app-meme-list'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProfiloComponent', 'selector': 'app-profilo'},{'name': 'RegisterComponent', 'selector': 'app-register'}];
+    var DIRECTIVES = [{'name': 'MemeItemDirective', 'selector': '[appMemeItem]'}];
+    var ACTUAL_COMPONENT = {'name': 'RegisterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RegisterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
